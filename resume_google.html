@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume (Google for Education)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #1A2340;
+    --mid:     #1A6E3C;
+    --accent:  #188038;   /* Google green */
+    --accent2: #4285F4;   /* Google blue */
+    --text:    #1A1A1A;
+    --muted:   #555;
+    --rule:    #C4D7C8;
+    --tag-bg:  #E8F5E9;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: #EAEFEA;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 44px 52px 52px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid var(--accent);
+    position: relative;
+  }
+  /* Google colour bar */
+  .header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right,
+      #4285F4 25%, #EA4335 25% 50%, #FBBC04 50% 75%, #34A853 75%);
+  }
+  .header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header .title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .contact a { color: var(--accent2); text-decoration: none; }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 17px; }
+  .section-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p { font-size: 9.5pt; line-height: 1.65; }
+
+  /* ── COMPETENCIES ── */
+  .competencies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 32px;
+  }
+  .competency-item {
+    font-size: 9pt;
+    padding: 3px 0 3px 13px;
+    position: relative;
+  }
+  .competency-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ── EXPERIENCE ── */
+  .company-block { margin-bottom: 18px; }
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .company-name { font-size: 10pt; font-weight: 700; color: var(--navy); }
+  .company-location { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+
+  .role-block { margin-bottom: 11px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #E8F5E9;
+    border-left: 3px solid var(--accent);
+  }
+  .role-title { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .role-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+
+  ul.bullets { list-style: none; padding-left: 0; }
+  ul.bullets li {
+    font-size: 9pt;
+    line-height: 1.55;
+    padding: 2px 0 2px 16px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    top: 3px;
+  }
+  .metric { font-weight: 600; color: var(--navy); }
+
+  /* ── SKILLS ── */
+  .skills-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    background: var(--tag-bg);
+    color: var(--navy);
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid #C4D7C8;
+  }
+
+  /* ── TWO-COL ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+
+  /* ── CERTS ── */
+  .cert-list { list-style: none; }
+  .cert-list li {
+    font-size: 9pt;
+    padding: 2px 0 2px 14px;
+    position: relative;
+  }
+  .cert-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    font-weight: 700;
+  }
+  .cert-issuer { font-size: 8pt; color: var(--muted); }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 10px; }
+  .edu-degree { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .edu-school { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .edu-dates { font-size: 8.5pt; color: var(--muted); }
+
+  /* ── LANGUAGES ── */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+  .lang-item { font-size: 9pt; }
+  .lang-level { font-size: 8pt; color: var(--muted); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 28px 40px 36px; max-width: 100%; }
+    .header::after { background: linear-gradient(to right, #4285F4 25%, #EA4335 25% 50%, #FBBC04 50% 75%, #34A853 75%) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Yogeswara Reddy Gondesi</h1>
+    <div class="title">Emerging Markets GTM Leader &nbsp;·&nbsp; EdTech &amp; AI Adoption &nbsp;·&nbsp; AMESA</div>
+    <div class="contact">
+      <span>📍 Dubai, UAE</span>
+      <span>📞 <a href="tel:+971561678385">+971 56 167 8385</a></span>
+      <span>✉ <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364" target="_blank">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Emerging markets commercial leader with <strong>10+ years</strong> architecting and executing Go-To-Market strategies across
+      <strong>9 AMESA markets</strong> (UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, Lebanon), driving technology adoption
+      in complex, multi-stakeholder environments through government bodies, institutional partners, and channel ecosystems.
+      Built a product vertical from <strong>zero regional presence to AED 2–5M in annual revenue</strong> in three years by
+      designing a full GTM playbook — market sizing, partner ecosystem development, digital transformation roadmapping,
+      and executive engagement — across a region with no existing infrastructure for the product.
+      Certified AI/ML practitioner (IIT Kanpur) with applied experience building prediction and NLP models across
+      education, healthcare, and public-sector use cases — bringing firsthand credibility to AI adoption conversations
+      with institutional decision-makers. Experienced in coaching and developing distributed sales teams across
+      multiple markets, building cultures of continuous learning and customer empathy.
+      Ready to apply this combination of emerging-market GTM execution, AI fluency, and institutional relationship
+      skills to accelerating Google for Education's Gemini and Workspace adoption across the AMESA region.
+    </p>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <div class="competency-item">Emerging Markets Go-To-Market Strategy</div>
+      <div class="competency-item">AI Adoption Strategy &amp; Digital Transformation</div>
+      <div class="competency-item">Government &amp; Institutional Stakeholder Engagement</div>
+      <div class="competency-item">Education Technology &amp; Public Sector Commercials</div>
+      <div class="competency-item">Partner &amp; Reseller Ecosystem Development</div>
+      <div class="competency-item">Team Leadership, Coaching &amp; Development</div>
+      <div class="competency-item">Executive Relationship Building (C-Suite / Ministry)</div>
+      <div class="competency-item">Product Launch &amp; Market Penetration</div>
+      <div class="competency-item">Commercial Negotiation at Scale</div>
+      <div class="competency-item">AMESA Regional Market Intelligence</div>
+      <div class="competency-item">Cross-Functional Team Orchestration</div>
+      <div class="competency-item">Revenue Growth &amp; OKR/KPI Ownership</div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+
+      <!-- Role 1 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-dates">Apr 2023 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>Architect and execute regional GTM strategy</strong> across <span class="metric">9 AMESA markets</span>, balancing sustainable growth objectives with annual revenue targets — defining partner ecosystem strategy, market segmentation, pricing architecture, and go-to-market sequencing across the GCC, Levant, and North Africa.</li>
+          <li>Drive <strong>AI and technology adoption</strong> across an enterprise client base by leading joint digital transformation workshops with senior institutional stakeholders — translating complex capability roadmaps into measurable business outcomes and adoption milestones.</li>
+          <li><strong>Coach, mentor, and develop</strong> distributed sales teams and distributor partner networks across multiple markets, building training programmes that span technical knowledge, consultative selling skills, and CRM discipline — consistently improving team performance against AOP targets.</li>
+          <li>Build and maintain executive relationships with <strong>senior stakeholders across institutional, government-adjacent, and enterprise accounts</strong>, serving as a trusted advisor on technology strategy and co-creating digital transformation roadmaps aligned to regional priorities.</li>
+          <li>Cultivate a <strong>partner ecosystem of 15+ resellers, system integrators, and technology partners</strong> across 9 markets — onboarding, enabling, and jointly planning with partners to accelerate product adoption and net-new pipeline, contributing to <span class="metric">15–20% year-on-year revenue growth</span>.</li>
+          <li>Executed go-to-market strategies for <span class="metric">3 major product launches</span>, conducting competitive displacement assessments and designing partner-led adoption programmes that achieved <span class="metric">20–30% revenue growth</span> in new segments within the first year.</li>
+          <li>Present pipeline performance, growth strategy, and market intelligence to senior international leadership — including the company's Management Board in Germany — with regular C-suite visibility on territory results, risks, and strategic priorities.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-dates">Jan 2020 – Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li><strong>Designed and executed a full regional GTM strategy from zero</strong> for the TBS product vertical — no existing market, no partner network, no brand awareness — growing it to <span class="metric">AED 2–5M in annual revenue</span> across 9 countries in three years through systematic market entry, partner ecosystem construction, and institutional adoption programmes.</li>
+          <li>Established <span class="metric">7+ distributor and reseller partnerships</span> across the AMESA region from scratch, building a scalable partner-led go-to-market model that could be replicated across new product lines and geographies — a direct analogue to Google's partner-led education technology expansion strategy.</li>
+          <li>Delivered executive-level digital transformation roadmaps and data analysis reports to senior stakeholders and the company's Management Board in Germany — sustained C-suite engagement on market expansion strategy, adoption metrics, and investment priorities.</li>
+          <li>Conducted technical workshops and seminars for institutional clients, educational bodies, and industry associations across the MENA region, positioning the company as a thought leader in standards-driven technology adoption.</li>
+          <li>Built sustainable competitive advantages in untapped markets by developing tailored positioning strategies based on deep market intelligence — achieving ~70% of AOP in Year 3 of a product with zero prior regional presence.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Technical Sales Engineer / Technical Sales Engineer</span>
+          <span class="role-dates">Jan 2018 – Dec 2019</span>
+        </div>
+        <ul class="bullets">
+          <li>Served as primary technical consultant and solutions specialist for institutional clients — architects, consultants, and engineering bodies — delivering tailored technology recommendations and building the expert credibility that underpinned subsequent leadership appointments.</li>
+          <li>Built the institutional client and consultant network across the UAE that became the foundation for a 9-market, multi-million-dirham commercial territory scaled over the following five years.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cupra -->
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">Cupra International</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Sales Engineer / Sales Engineer</span>
+          <span class="role-dates">Nov 2014 – Dec 2017</span>
+        </div>
+        <ul class="bullets">
+          <li>Managed end-to-end B2B commercial relationships across industrial and infrastructure sectors in the UAE — building the consultative sales discipline, market intelligence capabilities, and client relationship skills applied throughout the subsequent leadership career.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI RELEVANCE -->
+  <section>
+    <div class="section-title">Applied AI Experience — Education &amp; Public Sector Relevance</div>
+    <p style="font-size:8.5pt; color:var(--muted); margin-bottom:8px;">
+      Hands-on ML/AI projects (IIT Kanpur certification) with direct relevance to Google for Education's Gemini and AI adoption mandate:
+    </p>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:6px 24px;">
+      <div style="border-left:3px solid var(--accent); padding:5px 0 5px 10px;">
+        <div style="font-size:8.5pt; font-weight:600; color:var(--navy);">Student No-Show / Engagement Predictor</div>
+        <div style="font-size:8pt; color:var(--muted); margin-top:1px;">Healthcare prediction model adapted to education: predicting disengagement from historical attendance, assessment and demographic data — directly applicable to student retention AI in EdTech.</div>
+      </div>
+      <div style="border-left:3px solid var(--accent); padding:5px 0 5px 10px;">
+        <div style="font-size:8.5pt; font-weight:600; color:var(--navy);">NLP Intent Classification — LSTM Networks</div>
+        <div style="font-size:8pt; color:var(--muted); margin-top:1px;">Built a spam/intent classifier using Embedding + LSTM + Dense networks — foundational to AI-driven student query routing and Gemini-powered educational assistant use cases.</div>
+      </div>
+      <div style="border-left:3px solid var(--accent); padding:5px 0 5px 10px;">
+        <div style="font-size:8.5pt; font-weight:600; color:var(--navy);">Image Captioning — Convolutional Neural Networks</div>
+        <div style="font-size:8pt; color:var(--muted); margin-top:1px;">CNN-based image captioning model — relevant to Google's multimodal AI (Gemini) adoption conversations with institutions exploring AI-assisted content creation and accessibility tools.</div>
+      </div>
+      <div style="border-left:3px solid var(--accent); padding:5px 0 5px 10px;">
+        <div style="font-size:8.5pt; font-weight:600; color:var(--navy);">Multiclass Prediction — Public Sector Use Cases</div>
+        <div style="font-size:8pt; color:var(--muted); margin-top:1px;">Classification models across healthcare, pharma, and manufacturing — enabling credible AI adoption strategy conversations with government ministries and public-sector institutions.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-list">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Machine Learning</span>
+      <span class="skill-tag">Deep Learning (CNN, LSTM)</span>
+      <span class="skill-tag">NLP &amp; Text Classification</span>
+      <span class="skill-tag">AI Adoption Strategy</span>
+      <span class="skill-tag">Power BI</span>
+      <span class="skill-tag">Tableau</span>
+      <span class="skill-tag">Google Workspace</span>
+      <span class="skill-tag">MS Dynamics CRM</span>
+      <span class="skill-tag">MS Project</span>
+      <span class="skill-tag">AutoCAD</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <section>
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma, Business Administration – Marketing <em>(Distinction)</em></div>
+          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+          <div class="edu-dates">2019 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering <em>(Distinction)</em></div>
+          <div class="edu-school">Amrita School of Engineering</div>
+          <div class="edu-dates">2010 – 2014</div>
+        </div>
+      </div>
+      <div>
+        <ul class="cert-list">
+          <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">· IIT Kanpur (2022–2023)</span></li>
+          <li>Certified Data Scientist &amp; Deep Learning Expert <span class="cert-issuer">· Edvancer Eduventures</span></li>
+          <li>PMP® Certification Training <span class="cert-issuer">· The Knowledge Academy</span></li>
+          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">· Black Belt In Progress</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      <span class="lang-item">English <span class="lang-level">(Full Professional)</span></span>
+      <span class="lang-item">Hindi <span class="lang-level">(Fluent)</span></span>
+      <span class="lang-item">Telugu <span class="lang-level">(Native)</span></span>
+      <span class="lang-item">Malayalam <span class="lang-level">(Conversational)</span></span>
+      <span class="lang-item">Tamil <span class="lang-level">(Conversational)</span></span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
