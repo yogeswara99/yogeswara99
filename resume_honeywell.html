@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #1B2A4A;
+    --mid:    #2E4370;
+    --accent: #C8102E;
+    --text:   #1A1A1A;
+    --muted:  #555;
+    --rule:   #C8D0DC;
+    --bg:     #FFFFFF;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: #f0f2f5;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: var(--bg);
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 44px 52px 52px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header { border-bottom: 3px solid var(--navy); padding-bottom: 14px; margin-bottom: 18px; }
+  .header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header .title {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .contact span { display: flex; align-items: center; gap: 5px; }
+  .contact a { color: var(--mid); text-decoration: none; }
+  .contact a:hover { text-decoration: underline; }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 18px; }
+  .section-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p { font-size: 9.5pt; color: var(--text); line-height: 1.65; }
+
+  /* ── COMPETENCIES ── */
+  .competencies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px 32px;
+  }
+  .competency-item {
+    font-size: 9pt;
+    color: var(--text);
+    padding: 3px 0 3px 14px;
+    position: relative;
+  }
+  .competency-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ── EXPERIENCE ── */
+  .company-block { margin-bottom: 20px; }
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .company-name {
+    font-size: 10pt;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .company-location {
+    font-size: 8.5pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .role-block { margin-bottom: 12px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #F0F3F8;
+    border-left: 3px solid var(--accent);
+  }
+  .role-title {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .role-dates {
+    font-size: 8.5pt;
+    color: var(--muted);
+    white-space: nowrap;
+    font-weight: 500;
+  }
+  ul.bullets { list-style: none; padding-left: 0; }
+  ul.bullets li {
+    font-size: 9pt;
+    color: var(--text);
+    line-height: 1.55;
+    padding: 2px 0 2px 16px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    top: 3px;
+  }
+  .metric {
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .placeholder {
+    background: #FFF3CD;
+    border-radius: 3px;
+    padding: 0 3px;
+    font-weight: 600;
+    color: #856404;
+    font-size: 8.5pt;
+  }
+
+  /* ── TWO-COL SECTIONS ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+  }
+
+  /* ── SKILLS ── */
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .skill-tag {
+    background: #EEF1F8;
+    color: var(--navy);
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid #C8D0DC;
+  }
+
+  /* ── CERTS ── */
+  .cert-list { list-style: none; }
+  .cert-list li {
+    font-size: 9pt;
+    padding: 2px 0 2px 14px;
+    position: relative;
+    color: var(--text);
+  }
+  .cert-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    font-weight: 700;
+  }
+  .cert-issuer {
+    font-size: 8pt;
+    color: var(--muted);
+  }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 10px; }
+  .edu-degree {
+    font-size: 9.5pt;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .edu-school {
+    font-size: 9pt;
+    color: var(--muted);
+    font-style: italic;
+  }
+  .edu-dates {
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+
+  /* ── LANGUAGES ── */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+  .lang-item { font-size: 9pt; color: var(--text); }
+  .lang-level { font-size: 8pt; color: var(--muted); }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 28px 40px 36px; max-width: 100%; }
+    .placeholder { background: #FFF3CD !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Yogeswara Reddy Gondesi</h1>
+    <div class="title">Sales Manager &nbsp;·&nbsp; Technical &amp; Strategic Business Development</div>
+    <div class="contact">
+      <span>📍 Dubai, UAE</span>
+      <span>📞 <a href="tel:+971561678385">+971 56 167 8385</a></span>
+      <span>✉ <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364" target="_blank">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Technical B2B Sales Manager with <strong>9+ years</strong> building and scaling multi-market channel networks across the
+      GCC, Levant, and North Africa — the exact footprint Honeywell's Middle East business operates in. At OBO Bettermann MENA,
+      built a product vertical from <strong>zero regional presence</strong> to sustained year-over-year growth across 9 countries,
+      managing distributor and consultant relationships through CRM-driven Annual Operating Plan (AOP) execution and hands-on
+      technical enablement. Briefed senior international leadership — including a German Management Board — on territory
+      performance, pipeline, and strategic priorities. Brings a rare combination of regional channel depth,
+      <strong>solution selling</strong> discipline, and formal AI/ML &amp; data analytics training (IIT Kanpur) that enables
+      sharper forecasting, smarter account prioritisation, and faster adaptation to safety-critical, standards-driven product
+      environments — including digital transformation initiatives. Ready to apply the same new-market, new-product playbook to
+      Honeywell's portfolio growth in the region.
+    </p>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <div class="competency-item">Annual Operating Plan (AOP) Planning &amp; Execution</div>
+      <div class="competency-item">Solution Selling &amp; Specification Sales</div>
+      <div class="competency-item">Channel Partner &amp; Distributor Management</div>
+      <div class="competency-item">Market Intelligence &amp; Competitive Analysis</div>
+      <div class="competency-item">EPC Contractor &amp; System Integrator Engagement</div>
+      <div class="competency-item">CRM-Driven Pipeline Management (MS Dynamics)</div>
+      <div class="competency-item">Demand Generation &amp; Pursuit Campaign Support</div>
+      <div class="competency-item">Digital Transformation &amp; IoT/IIoT Strategy</div>
+      <div class="competency-item">Pricing, Forecasting &amp; Budgeting</div>
+      <div class="competency-item">Multi-Country Territory Management (9 Markets)</div>
+      <div class="competency-item">Technical Sales Presentations &amp; Product Demos</div>
+      <div class="competency-item">Senior Stakeholder &amp; C-Suite Engagement</div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <!-- OBO Bettermann Block -->
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+
+      <!-- Role 1 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-dates">Apr 2023 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Drive Annual Operating Plan (AOP) execution and territory growth across <span class="metric">9 markets</span> (UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, Lebanon), managing a distributor and consultant network that generates <span class="placeholder">[AED X million]</span> in annual channel revenue through CRM-driven account planning (MS Dynamics).</li>
+          <li>Built and executed go-to-market and pursuit strategies for <span class="placeholder">[X]</span> new product launches, combining competitor analysis, market sizing, and pricing strategy to drive entry into previously untapped segments — achieving <span class="placeholder">[X%]</span> revenue growth in new categories within <span class="placeholder">[X]</span> months.</li>
+          <li>Engage <span class="placeholder">[X+]</span> regional channel partners, EPC contractors, and system integrators to drive adoption of new and upgraded product lines through structured training, technical enablement, and joint account planning, contributing to <span class="placeholder">[X%]</span> year-on-year channel growth.</li>
+          <li>Serve as primary technical and commercial point of contact for distributors and consultants across the Middle East and Egypt, conducting specification sales engagements and product demonstrations that position OBO Bettermann on <span class="placeholder">[X+]</span> competitive projects annually.</li>
+          <li>Lead, coach, and develop a regional sales force of <span class="placeholder">[X]</span>, building training calendars spanning product knowledge, CRM discipline, and consultative solution selling — raising team AOP attainment by <span class="placeholder">[X%]</span>.</li>
+          <li>Prepare and present sales forecasts, budgets, and performance reports to senior management, providing pipeline visibility and strategic recommendations that feed directly into annual planning cycles.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-dates">Jan 2020 – Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Built the TBS product vertical from <strong>zero presence in the Middle East</strong> to <span class="placeholder">[AED X million]</span> in annual revenue over three years, establishing <span class="placeholder">[X]</span> distributor relationships across 9 countries and reaching <span class="placeholder">[X%]</span> of AOP by Year 3 — a new-market, new-product playbook directly transferable to Honeywell portfolio expansion.</li>
+          <li>Established sub-distribution channels and a loyal customer base for targeted products in previously untapped categories, partnering with retail channel leaders across multiple product verticals in the UAE and growing active partner count by <span class="placeholder">[X%]</span>.</li>
+          <li>Partnered directly with the Regional Director to prepare data analysis, presentations, and pipeline reporting for the company's Management Board in Germany — regular, direct engagement with C-suite international leadership on territory strategy and AOP performance.</li>
+          <li>Represented the company at major international trade shows (Light + Building, Frankfurt; The Big 5, Riyadh), generating <span class="placeholder">[X+]</span> new distributor and consultant relationships per event cycle.</li>
+          <li>Developed product positioning and market segmentation strategies through systematic demand assessment, enabling more targeted regional sales execution and accelerating time-to-revenue in new categories.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Technical Sales Engineer / Technical Sales Engineer</span>
+          <span class="role-dates">Jan 2018 – Dec 2019</span>
+        </div>
+        <ul class="bullets">
+          <li>Acted as technical point of contact for distributors, consultants, and EPC contractors, delivering product demonstrations, technical consultations, and tailored solution recommendations across the UAE and wider GCC.</li>
+          <li>Built the consultant specification relationships and channel foundations across the UAE that became the core network later scaled into a 9-market, multi-million-dirham territory in the Manager and Assistant Manager roles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cupra International Block -->
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">Cupra International</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Sales Engineer / Sales Engineer</span>
+          <span class="role-dates">Nov 2014 – Dec 2017</span>
+        </div>
+        <ul class="bullets">
+          <li>Managed technical B2B sales across industrial and technical product categories in the UAE, developing <span class="placeholder">[X+]</span> key accounts across construction, infrastructure, and industrial sectors and consistently achieving <span class="placeholder">[X%+]</span> of annual sales targets — building the consultative, solution-based selling methodology and regional network carried through the entire OBO Bettermann career.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-list">
+      <span class="skill-tag">MS Dynamics CRM</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Power BI</span>
+      <span class="skill-tag">Tableau</span>
+      <span class="skill-tag">AI / Machine Learning</span>
+      <span class="skill-tag">Deep Learning</span>
+      <span class="skill-tag">Data Science</span>
+      <span class="skill-tag">MS Project</span>
+      <span class="skill-tag">SharePoint</span>
+      <span class="skill-tag">Excel &amp; PowerPoint</span>
+      <span class="skill-tag">IoT / Digital Platforms</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <section>
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma, Business Administration – Marketing <em>(Distinction)</em></div>
+          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+          <div class="edu-dates">2019 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering <em>(Distinction)</em></div>
+          <div class="edu-school">Amrita School of Engineering</div>
+          <div class="edu-dates">2010 – 2014</div>
+        </div>
+      </div>
+      <div>
+        <ul class="cert-list">
+          <li>PMP® Certification Training <span class="cert-issuer">· The Knowledge Academy</span></li>
+          <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">· IIT Kanpur</span></li>
+          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">· <em>Black Belt — In Progress</em></span></li>
+          <li>Certified Data Scientist &amp; Deep Learning Expert <span class="cert-issuer">· Edvancer Eduventures</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      <span class="lang-item">English <span class="lang-level">(Fluent)</span></span>
+      <span class="lang-item">Hindi <span class="lang-level">(Fluent)</span></span>
+      <span class="lang-item">Telugu <span class="lang-level">(Native)</span></span>
+      <span class="lang-item">Malayalam <span class="lang-level">(Conversational)</span></span>
+      <span class="lang-item">Tamil <span class="lang-level">(Conversational)</span></span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
