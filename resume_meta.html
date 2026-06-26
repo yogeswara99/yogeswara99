@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume (Meta)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #1A1A2E;
+    --mid:    #0F3460;
+    --accent: #0866FF;   /* Meta blue */
+    --accent2: #1877F2;
+    --text:   #1A1A1A;
+    --muted:  #555;
+    --rule:   #C5D0E6;
+    --bg:     #FFFFFF;
+    --tag-bg: #EBF1FF;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: #EEF2F7;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: var(--bg);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 44px 52px 52px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding-bottom: 14px;
+    margin-bottom: 18px;
+    border-bottom: 3px solid var(--accent);
+  }
+  .header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header .title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .contact a { color: var(--mid); text-decoration: none; }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 17px; }
+  .section-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p { font-size: 9.5pt; line-height: 1.65; }
+
+  /* ── COMPETENCIES ── */
+  .competencies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 32px;
+  }
+  .competency-item {
+    font-size: 9pt;
+    padding: 3px 0 3px 13px;
+    position: relative;
+  }
+  .competency-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ── EXPERIENCE ── */
+  .company-block { margin-bottom: 18px; }
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .company-name { font-size: 10pt; font-weight: 700; color: var(--navy); }
+  .company-location { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+  .role-block { margin-bottom: 11px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #EBF1FF;
+    border-left: 3px solid var(--accent);
+  }
+  .role-title { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .role-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+
+  ul.bullets { list-style: none; padding-left: 0; }
+  ul.bullets li {
+    font-size: 9pt;
+    line-height: 1.55;
+    padding: 2px 0 2px 16px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    top: 3px;
+  }
+  .metric { font-weight: 600; color: var(--navy); }
+
+  /* ── AI PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 24px;
+  }
+  .project-card {
+    border-left: 3px solid var(--accent);
+    padding: 5px 0 5px 10px;
+  }
+  .project-title { font-size: 8.5pt; font-weight: 600; color: var(--navy); }
+  .project-desc { font-size: 8pt; color: var(--muted); line-height: 1.4; margin-top: 1px; }
+  .project-tech { font-size: 7.5pt; color: var(--accent); font-weight: 500; margin-top: 2px; }
+
+  /* ── SKILLS ── */
+  .skills-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    background: var(--tag-bg);
+    color: var(--navy);
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid #C5D0E6;
+  }
+
+  /* ── TWO-COL ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+
+  /* ── CERTS ── */
+  .cert-list { list-style: none; }
+  .cert-list li {
+    font-size: 9pt;
+    padding: 2px 0 2px 14px;
+    position: relative;
+  }
+  .cert-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 8pt;
+    font-weight: 700;
+  }
+  .cert-issuer { font-size: 8pt; color: var(--muted); }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 10px; }
+  .edu-degree { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .edu-school { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .edu-dates { font-size: 8.5pt; color: var(--muted); }
+
+  /* ── LANGUAGES ── */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+  .lang-item { font-size: 9pt; }
+  .lang-level { font-size: 8pt; color: var(--muted); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 28px 40px 36px; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Yogeswara Reddy Gondesi</h1>
+    <div class="title">Enterprise Technical Sales &nbsp;·&nbsp; AI &amp; Business Messaging Solutions &nbsp;·&nbsp; EMEA</div>
+    <div class="contact">
+      <span>📍 Dubai, UAE</span>
+      <span>📞 <a href="tel:+971561678385">+971 56 167 8385</a></span>
+      <span>✉ <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364" target="_blank">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+    </div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Enterprise Technical Sales specialist with <strong>10+ years</strong> driving end-to-end sales cycles, technical solution design, and
+      multi-stakeholder executive engagement across EMEA markets. Proven ability to bridge business and technical conversations —
+      translating complex solution architectures into compelling business cases for C-suite, IT, marketing, and customer experience
+      stakeholders simultaneously. Built a <strong>9-market territory from zero to AED 2–5M</strong> in annual revenue by designing
+      and selling technically complex, standards-driven solutions through consultative architecture workshops and multi-channel partner engagement.
+      Certified AI/ML practitioner (IIT Kanpur) with hands-on experience building <strong>production-grade prediction models</strong>
+      across banking, healthcare, retail, and marketing use cases — directly aligned with Meta's Business Messaging and Agentic AI platform.
+      Brings the rare combination of enterprise sales execution, technical architecture fluency, and
+      applied AI expertise needed to unlock the next generation of customer engagement solutions.
+    </p>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <div class="competency-item">Enterprise End-to-End Sales Cycle Management</div>
+      <div class="competency-item">Technical Solution Architecture &amp; Design</div>
+      <div class="competency-item">Prospecting, Pipeline Development &amp; Closing</div>
+      <div class="competency-item">AI / Agentic Platform Solutioning</div>
+      <div class="competency-item">Business Messaging &amp; CX Platform Sales</div>
+      <div class="competency-item">CRM / ERP Integration &amp; API Ecosystem</div>
+      <div class="competency-item">Executive Stakeholder &amp; C-Suite Engagement</div>
+      <div class="competency-item">Value Proposition &amp; Business Case Development</div>
+      <div class="competency-item">Cross-Functional Team Orchestration</div>
+      <div class="competency-item">SaaS / Multi-Product Consultative Selling</div>
+      <div class="competency-item">Revenue Target &amp; KPI Ownership</div>
+      <div class="competency-item">Competitive Displacement &amp; Market Penetration</div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+
+      <!-- Role 1 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-dates">Apr 2023 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Own the <strong>full enterprise sales cycle</strong> — from prospecting and pipeline development through technical architecture workshops, commercial proposal design, and close — across a multi-million AED territory spanning <span class="metric">9 EMEA markets</span> (UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, Lebanon).</li>
+          <li>Lead <strong>joint technical architecture sessions</strong> with enterprise clients engaging multiple stakeholder budgets simultaneously — bridging conversations between technical teams, procurement, and C-suite decision makers to align solution design with business outcomes.</li>
+          <li>Built and executed go-to-market strategies for <span class="metric">3 major product launches</span>, conducting competitive displacement assessments and designing solution-specific value propositions that drove <span class="metric">20–30% revenue growth</span> in new segments.</li>
+          <li>Engage <span class="metric">15+ enterprise channel partners and system integrators</span> through structured enablement programs and joint account planning, contributing to <span class="metric">15–20% year-on-year revenue growth</span> and growing net-new pipeline.</li>
+          <li>Develop data-driven business cases and executive presentations that articulate measurable ROI, regularly presenting pipeline performance and strategic recommendations to the regional Management Board.</li>
+          <li>Orchestrate cross-functional teams (technical, marketing, product, operations) to deliver 3–12 month solution development projects on schedule, removing blockers and maintaining client momentum through the sales cycle.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-dates">Jan 2020 – Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Created a <strong>net-new market from zero</strong> — prospected, designed, and closed the TBS product vertical across 9 countries with no prior regional presence, growing it to <span class="metric">AED 2–5M in annual revenue</span> within three years through a repeatable enterprise solution-selling playbook.</li>
+          <li>Designed and delivered <strong>technical architecture proposals</strong> for enterprise clients across construction, infrastructure, and industrial sectors, conducting site surveys and translating complex technical requirements into tailored solution specifications.</li>
+          <li>Collaborated directly with the Regional Director to build executive-level presentations and data analysis reports for the company's Management Board in Germany — sustained C-suite engagement on pipeline, revenue strategy, and market expansion.</li>
+          <li>Built scalable partner ecosystem by establishing <span class="metric">7+ distributor and system integrator relationships</span> across 9 markets, growing active partner count by ~20% through structured onboarding and joint account planning programmes.</li>
+          <li>Represented the company at major enterprise trade events (Light + Building, Frankfurt; The Big 5, Riyadh), generating net-new pipeline and expanding the regional enterprise client network.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Technical Sales Engineer / Technical Sales Engineer</span>
+          <span class="role-dates">Jan 2018 – Dec 2019</span>
+        </div>
+        <ul class="bullets">
+          <li>Served as the primary technical solution architect for enterprise clients — conducting requirements assessments, designing tailored product specifications, and leading technical demonstrations for architects, consultants, and EPC contractors across the GCC.</li>
+          <li>Built the enterprise client and consultant network across the UAE that became the foundation for the 9-market, multi-million-dirham territory scaled in subsequent leadership roles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cupra International -->
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">Cupra International</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Sales Engineer / Sales Engineer</span>
+          <span class="role-dates">Nov 2014 – Dec 2017</span>
+        </div>
+        <ul class="bullets">
+          <li>Managed end-to-end technical B2B sales across industrial product categories in the UAE — from prospecting and technical consultation through proposal design and close — building the consultative, solution-based selling methodology applied throughout the OBO Bettermann career.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI & ML PROJECTS -->
+  <section>
+    <div class="section-title">Applied AI &amp; Machine Learning Projects</div>
+    <p style="font-size:8.5pt; color:var(--muted); margin-bottom:9px;">
+      Hands-on projects completed as part of Advanced AI/ML Certification (IIT Kanpur) — directly relevant to Meta's Business Messaging and Agentic AI platform use cases.
+    </p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-title">Customer Complaint Resolution — Banking</div>
+        <div class="project-desc">Classification model to predict customer escalation risk from transactional and behavioural parameters.</div>
+        <div class="project-tech">Business Messaging relevance: automated complaint triage via AI agent</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Targeted Messaging Campaign — Insurance</div>
+        <div class="project-desc">Propensity model to predict customer interest in policy offerings from demographic and behavioural data.</div>
+        <div class="project-tech">Business Messaging relevance: personalised campaign delivery at scale</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Appointment No-Show Prediction — Healthcare</div>
+        <div class="project-desc">Prediction model using historical appointment, medical history, and demographic data to reduce no-show rates.</div>
+        <div class="project-tech">Business Messaging relevance: proactive AI-driven reminder &amp; re-engagement</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Spam Filter for Customer Queries — NLP</div>
+        <div class="project-desc">LSTM + Dense Layer network to classify and filter inbound customer messages at scale.</div>
+        <div class="project-tech">Business Messaging relevance: intelligent message routing &amp; agent orchestration</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Multiclass Intent Prediction — CNNs</div>
+        <div class="project-desc">Multi-label CNN model for classifying customer intent from unstructured text queries.</div>
+        <div class="project-tech">Business Messaging relevance: AI agent intent classification &amp; routing</div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Hazard Prediction — Manufacturing</div>
+        <div class="project-desc">Predictive model for hazard scoring across maintenance tasks using operational parameters.</div>
+        <div class="project-tech">Business Messaging relevance: proactive safety alerts via AI-driven messaging</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-list">
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">SQL</span>
+      <span class="skill-tag">Machine Learning</span>
+      <span class="skill-tag">Deep Learning (CNN, LSTM)</span>
+      <span class="skill-tag">NLP / Text Classification</span>
+      <span class="skill-tag">AI Agent Orchestration</span>
+      <span class="skill-tag">Power BI</span>
+      <span class="skill-tag">Tableau</span>
+      <span class="skill-tag">MS Dynamics CRM</span>
+      <span class="skill-tag">API / Platform Integration</span>
+      <span class="skill-tag">AutoCAD</span>
+      <span class="skill-tag">MS Project</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <section>
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma, Business Administration – Marketing <em>(Distinction)</em></div>
+          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+          <div class="edu-dates">2019 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering <em>(Distinction)</em></div>
+          <div class="edu-school">Amrita School of Engineering (Amrita Vishwa Vidyapeetham)</div>
+          <div class="edu-dates">2010 – 2014</div>
+        </div>
+      </div>
+      <div>
+        <ul class="cert-list">
+          <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">· IIT Kanpur (Jun 2022 – Jul 2023)</span></li>
+          <li>Certified Data Scientist &amp; Deep Learning Expert <span class="cert-issuer">· Edvancer Eduventures</span></li>
+          <li>PMP® Certification Training <span class="cert-issuer">· The Knowledge Academy</span></li>
+          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">· Black Belt In Progress</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      <span class="lang-item">English <span class="lang-level">(Full Professional)</span></span>
+      <span class="lang-item">Hindi <span class="lang-level">(Fluent)</span></span>
+      <span class="lang-item">Telugu <span class="lang-level">(Native)</span></span>
+      <span class="lang-item">Arabic <span class="lang-level">(Elementary)</span></span>
+      <span class="lang-item">Malayalam <span class="lang-level">(Conversational)</span></span>
+      <span class="lang-item">Tamil <span class="lang-level">(Conversational)</span></span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
