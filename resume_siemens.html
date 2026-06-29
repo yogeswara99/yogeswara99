@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume (Siemens Energy)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #1A2535;
+    --mid:    #00695C;
+    --accent: #009999;   /* Siemens Energy teal */
+    --accent2:#007A7A;
+    --text:   #1A1A1A;
+    --muted:  #555;
+    --rule:   #B2DFDB;
+    --tag-bg: #E0F2F1;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: #DFF0EF;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 44px 52px 52px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--accent);
+  }
+  .header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 28pt;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header .title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 20px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  .contact a { color: var(--mid); text-decoration: none; }
+
+  /* ── GREEN H2 BADGE ── */
+  .h2-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #00695C, #009999);
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-top: 8px;
+  }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 17px; }
+  .section-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p { font-size: 9.5pt; line-height: 1.65; }
+
+  /* ── COMPETENCIES ── */
+  .competencies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 32px;
+  }
+  .competency-item {
+    font-size: 9pt;
+    padding: 3px 0 3px 13px;
+    position: relative;
+  }
+  .competency-item::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  /* ── EXPERIENCE ── */
+  .company-block { margin-bottom: 18px; }
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .company-name { font-size: 10pt; font-weight: 700; color: var(--navy); }
+  .company-location { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+  .role-block { margin-bottom: 11px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px; margin-bottom: 5px;
+    padding: 5px 10px;
+    background: #E0F2F1;
+    border-left: 3px solid var(--accent);
+  }
+  .role-title { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .role-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+
+  ul.bullets { list-style: none; padding-left: 0; }
+  ul.bullets li {
+    font-size: 9pt; line-height: 1.55;
+    padding: 2px 0 2px 16px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute;
+    left: 0; color: var(--accent);
+    font-size: 8pt; top: 3px;
+  }
+  .metric { font-weight: 600; color: var(--navy); }
+
+  /* ── SKILLS ── */
+  .skills-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .skill-tag {
+    background: var(--tag-bg);
+    color: var(--navy);
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 3px 9px;
+    border-radius: 100px;
+    border: 1px solid var(--rule);
+  }
+  .skill-tag.h2 {
+    background: linear-gradient(135deg, #00695C, #009999);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+  }
+
+  /* ── TWO-COL ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
+
+  /* ── CERTS ── */
+  .cert-list { list-style: none; }
+  .cert-list li { font-size: 9pt; padding: 2px 0 2px 14px; position: relative; }
+  .cert-list li::before {
+    content: '✓';
+    position: absolute; left: 0;
+    color: var(--accent); font-size: 8pt; font-weight: 700;
+  }
+  .cert-list li.h2-cert { font-weight: 600; color: var(--mid); }
+  .cert-list li.h2-cert::before { content: '⚡'; color: var(--accent); }
+  .cert-issuer { font-size: 8pt; color: var(--muted); }
+
+  /* ── EDUCATION ── */
+  .edu-item { margin-bottom: 10px; }
+  .edu-degree { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .edu-school { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .edu-dates { font-size: 8.5pt; color: var(--muted); }
+
+  /* ── LANGUAGES ── */
+  .lang-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
+  .lang-item { font-size: 9pt; }
+  .lang-level { font-size: 8pt; color: var(--muted); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 28px 40px 36px; max-width: 100%; }
+    .h2-badge, .skill-tag.h2 { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <h1>Yogeswara Reddy Gondesi</h1>
+    <div class="title">Senior Sales Client Manager &nbsp;·&nbsp; Industrial &amp; Energy Transformation &nbsp;·&nbsp; MENA</div>
+    <div class="contact">
+      <span>📍 Dubai, UAE</span>
+      <span>📞 <a href="tel:+971561678385">+971 56 167 8385</a></span>
+      <span>✉ <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364" target="_blank">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+    </div>
+    <div class="h2-badge">⚡ Green Hydrogen &amp; Renewable Energy Certified</div>
+  </header>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Senior Sales Client Manager with <strong>10+ years</strong> leading regional sales teams, driving bookings growth,
+      and executing Business Target Agreements (BTA) across <strong>9 industrial markets in the GCC, Levant, and North Africa</strong>.
+      Proven track record managing the full commercial cycle — from sub-regional forecasting and pipeline management
+      (CRM-driven) through client engagement, negotiation, compliance (LoA), and issue resolution — for technically
+      complex, standards-driven products in capital-intensive industries.
+      Certified in <strong>Green Hydrogen, Green Ammonia, and Renewable Energy</strong> — uniquely positioned to support
+      Siemens Energy's Transformation of Industry division in driving decarbonization conversations and green H2 adoption
+      with industrial clients across the MENA region.
+      Experienced in coaching and developing client-facing teams, aligning country heads and Business Development
+      Managers to shared targets, and implementing digital tools to improve sales efficiency and performance.
+      Combines deep regional market knowledge, executive stakeholder relationships, and energy transition credentials
+      to drive sustainable year-over-year bookings growth in the compression and industrial services business.
+    </p>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <div class="competency-item">Regional Repair &amp; Service Sales Leadership</div>
+      <div class="competency-item">Green Hydrogen &amp; Energy Transition Strategy</div>
+      <div class="competency-item">Business Target Agreement (BTA) Planning</div>
+      <div class="competency-item">Sub-Regional Bookings Forecasting &amp; CRM (SFDC)</div>
+      <div class="competency-item">Team Coaching, Development &amp; Performance Management</div>
+      <div class="competency-item">Industrial Client Engagement &amp; Negotiations</div>
+      <div class="competency-item">Compliance Processes (LoA) &amp; Sales Governance</div>
+      <div class="competency-item">Digital Tool Implementation &amp; Sales Efficiency</div>
+      <div class="competency-item">Market Segmentation &amp; Strategic Positioning</div>
+      <div class="competency-item">Country Head &amp; BDM Alignment</div>
+      <div class="competency-item">Decarbonization &amp; Industrial Electrification</div>
+      <div class="competency-item">MENA Multi-Country Territory Management</div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL EXPERIENCE -->
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+
+      <!-- Role 1 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-dates">Apr 2023 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Lead regional sales activities across <span class="metric">9 MENA markets</span>, collaborating with country heads and Business Development Managers to develop and execute Business Target Agreements (BTA), set clear sales targets, and drive consistent year-over-year bookings growth — achieving <span class="metric">15–20% annual channel revenue growth</span>.</li>
+          <li>Maintain accurate sub-regional bookings forecasts (quarterly and yearly) using CRM-driven pipeline management (MS Dynamics), overseeing the effectiveness, coaching, and performance of the client-facing team to ensure country and regional growth targets are met.</li>
+          <li>Manage and enforce sales policies, guidelines, and compliance procedures across the regional team — overseeing approval and governance processes while driving the adoption of digital tools to improve efficiency, pipeline visibility, and performance reporting.</li>
+          <li>Support market segmentation and strategic positioning across retail and project segments, conducting competitive analysis and pricing strategy to identify growth opportunities in previously untapped industrial sectors — executing <span class="metric">3 major product launch GTM strategies</span> with <span class="metric">20–30% revenue growth</span> in new categories.</li>
+          <li>Lead <strong>client engagement, commercial negotiations, and issue resolution</strong> at senior levels across the GCC, Levant, and North Africa — serving as the primary commercial point of contact that keeps the company positioned as a preferred partner on competitive projects.</li>
+          <li>Coach, develop, and train the client-facing regional sales force through structured training calendars covering technical knowledge, CRM discipline, and consultative selling — managing distributor sales teams across multiple markets against monthly and annual KPI targets.</li>
+          <li>Present bookings performance, pipeline forecasts, and strategic recommendations to senior international leadership including the company's Management Board in Germany — sustained C-suite engagement on regional growth strategy and investment priorities.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-dates">Jan 2020 – Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Drove sustained bookings growth for the TBS product vertical from <strong>zero regional presence</strong> to <span class="metric">AED 2–5M in annual revenue</span> over three years — defining the GTM strategy, establishing <span class="metric">7+ sub-regional distributor and partner relationships</span> across 9 countries, and reaching ~70% of BTA by Year 3.</li>
+          <li>Collaborated with the Regional Director on Business Target Agreement planning, data analysis, and executive reporting to the company's Management Board in Germany — direct exposure to multi-country BTA governance and C-suite performance accountability.</li>
+          <li>Conducted technical site visits, surveys, and client inspections across the MENA region to assess customer requirements and propose tailored solutions — building the deep industrial client relationships that underpin long-term repair and service business growth.</li>
+          <li>Implemented product positioning and segmentation strategies across multiple industrial verticals, enabling the sales team to target high-value segments more effectively and accelerate time-to-booking in new markets.</li>
+          <li>Represented the company at major international industry exhibitions (Light + Building, Frankfurt; The Big 5, Riyadh), generating net-new industrial client and partner relationships that expanded the sub-regional commercial network.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3 -->
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Technical Sales Engineer / Technical Sales Engineer</span>
+          <span class="role-dates">Jan 2018 – Dec 2019</span>
+        </div>
+        <ul class="bullets">
+          <li>Served as primary technical and commercial point of contact for industrial clients — architects, consultants, and contractors — delivering tailored product recommendations, conducting technical presentations and demonstrations, and coordinating with internal teams on project execution.</li>
+          <li>Built the foundation of the regional industrial client and consultant network that was scaled into a 9-market, multi-million-dirham territory in subsequent management roles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Cupra -->
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">Cupra International</span>
+        <span class="company-location">Dubai, UAE</span>
+      </div>
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Senior Sales Engineer / Sales Engineer</span>
+          <span class="role-dates">Nov 2014 – Dec 2017</span>
+        </div>
+        <ul class="bullets">
+          <li>Managed end-to-end technical B2B sales across industrial and infrastructure product categories in the UAE — building the consultative sales approach, industrial client relationships, and regional commercial network that underpins the entire subsequent management career.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL SKILLS -->
+  <section>
+    <div class="section-title">Technical Skills &amp; Tools</div>
+    <div class="skills-list">
+      <span class="skill-tag h2">Green Hydrogen</span>
+      <span class="skill-tag h2">Green Ammonia</span>
+      <span class="skill-tag h2">Renewable Energy</span>
+      <span class="skill-tag">CRM Pipeline Management</span>
+      <span class="skill-tag">Bookings Forecasting</span>
+      <span class="skill-tag">Power BI</span>
+      <span class="skill-tag">Tableau</span>
+      <span class="skill-tag">Python &amp; SQL</span>
+      <span class="skill-tag">MS Dynamics CRM</span>
+      <span class="skill-tag">AI / Machine Learning</span>
+      <span class="skill-tag">MS Project</span>
+      <span class="skill-tag">AutoCAD</span>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTIFICATIONS -->
+  <section>
+    <div class="section-title">Education &amp; Certifications</div>
+    <div class="two-col">
+      <div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma, Business Administration – Marketing <em>(Distinction)</em></div>
+          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+          <div class="edu-dates">2019 – 2021</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering <em>(Distinction)</em></div>
+          <div class="edu-school">Amrita School of Engineering</div>
+          <div class="edu-dates">2010 – 2014</div>
+        </div>
+      </div>
+      <div>
+        <ul class="cert-list">
+          <li class="h2-cert">Green Hydrogen &amp; Renewable Energy Certification <span class="cert-issuer">· Industry Certified</span></li>
+          <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">· IIT Kanpur (2022–2023)</span></li>
+          <li>PMP® Certification Training <span class="cert-issuer">· The Knowledge Academy</span></li>
+          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">· Black Belt In Progress</span></li>
+          <li>Certified Data Scientist <span class="cert-issuer">· Edvancer Eduventures</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      <span class="lang-item">English <span class="lang-level">(Full Professional)</span></span>
+      <span class="lang-item">Hindi <span class="lang-level">(Fluent)</span></span>
+      <span class="lang-item">Telugu <span class="lang-level">(Native)</span></span>
+      <span class="lang-item">Arabic <span class="lang-level">(Elementary)</span></span>
+      <span class="lang-item">Malayalam <span class="lang-level">(Conversational)</span></span>
+      <span class="lang-item">Tamil <span class="lang-level">(Conversational)</span></span>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
