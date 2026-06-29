@@ -10,8 +10,7 @@
 
   :root {
     --navy:   #1C1C2E;
-    --mid:    #8B1A1A;
-    --accent: #C8102E;   /* Eaton red */
+    --accent: #C8102E;
     --text:   #1A1A1A;
     --muted:  #555;
     --rule:   #DDB8BC;
@@ -35,7 +34,7 @@
     box-shadow: 0 4px 32px rgba(0,0,0,0.12);
   }
 
-  /* ── HEADER ── */
+  /* HEADER — single column, no emoji */
   .header {
     padding-bottom: 14px;
     margin-bottom: 18px;
@@ -58,16 +57,15 @@
     margin-top: 4px;
     margin-bottom: 10px;
   }
+  /* ATS-safe contact: plain text, no emoji */
   .contact {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px 20px;
     font-size: 8.5pt;
     color: var(--muted);
+    line-height: 1.8;
   }
-  .contact a { color: var(--mid); text-decoration: none; }
+  .contact a { color: var(--muted); text-decoration: none; }
 
-  /* ── SECTIONS ── */
+  /* SECTIONS */
   section { margin-bottom: 17px; }
   .section-title {
     font-size: 7.5pt;
@@ -80,31 +78,26 @@
     margin-bottom: 10px;
   }
 
-  /* ── SUMMARY ── */
+  /* SUMMARY */
   .summary p { font-size: 9.5pt; line-height: 1.65; }
 
-  /* ── COMPETENCIES ── */
-  .competencies-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4px 32px;
-  }
-  .competency-item {
+  /* COMPETENCIES — single column, ATS-safe */
+  .competencies-list { list-style: none; padding: 0; column-count: 2; column-gap: 32px; }
+  .competencies-list li {
     font-size: 9pt;
-    padding: 3px 0 3px 13px;
+    padding: 2px 0 2px 12px;
     position: relative;
+    break-inside: avoid;
   }
-  .competency-item::before {
-    content: '';
+  .competencies-list li::before {
+    content: '-';
     position: absolute;
-    left: 0; top: 50%;
-    transform: translateY(-50%);
-    width: 6px; height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
   }
 
-  /* ── EXPERIENCE ── */
+  /* EXPERIENCE */
   .company-block { margin-bottom: 18px; }
   .company-header {
     display: flex;
@@ -113,7 +106,7 @@
     margin-bottom: 2px;
   }
   .company-name { font-size: 10pt; font-weight: 700; color: var(--navy); }
-  .company-location { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+  .company-sub { font-size: 8.5pt; color: var(--muted); font-style: italic; }
 
   .role-block { margin-bottom: 11px; }
   .role-header {
@@ -122,61 +115,48 @@
     align-items: baseline;
     margin-top: 8px; margin-bottom: 5px;
     padding: 5px 10px;
-    background: #FDF0F1;
+    background: var(--tag-bg);
     border-left: 3px solid var(--accent);
   }
   .role-title { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
   .role-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
 
+  /* ATS-safe bullets: plain hyphen */
   ul.bullets { list-style: none; padding-left: 0; }
   ul.bullets li {
     font-size: 9pt; line-height: 1.55;
-    padding: 2px 0 2px 16px;
+    padding: 2px 0 2px 14px;
     position: relative;
   }
   ul.bullets li::before {
-    content: '▸';
+    content: '-';
     position: absolute;
-    left: 0; color: var(--accent);
-    font-size: 8pt; top: 3px;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
   }
   .metric { font-weight: 600; color: var(--navy); }
 
-  /* ── SKILLS ── */
-  .skills-list { display: flex; flex-wrap: wrap; gap: 6px; }
-  .skill-tag {
-    background: var(--tag-bg);
-    color: var(--navy);
-    font-size: 8pt;
-    font-weight: 500;
-    padding: 3px 9px;
-    border-radius: 100px;
-    border: 1px solid var(--rule);
-  }
+  /* SKILLS — single row, ATS-readable */
+  .skills-list { font-size: 9pt; line-height: 1.8; color: var(--text); }
 
-  /* ── TWO-COL ── */
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; }
-
-  /* ── CERTS ── */
-  .cert-list { list-style: none; }
-  .cert-list li { font-size: 9pt; padding: 2px 0 2px 14px; position: relative; }
-  .cert-list li::before {
-    content: '✓';
-    position: absolute; left: 0;
-    color: var(--accent); font-size: 8pt; font-weight: 700;
-  }
-  .cert-issuer { font-size: 8pt; color: var(--muted); }
-
-  /* ── EDUCATION ── */
+  /* EDUCATION + CERTS — single column for ATS */
   .edu-item { margin-bottom: 10px; }
   .edu-degree { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
   .edu-school { font-size: 9pt; color: var(--muted); font-style: italic; }
   .edu-dates { font-size: 8.5pt; color: var(--muted); }
 
-  /* ── LANGUAGES ── */
-  .lang-row { display: flex; flex-wrap: wrap; gap: 6px 24px; }
-  .lang-item { font-size: 9pt; }
-  .lang-level { font-size: 8pt; color: var(--muted); }
+  .cert-list { list-style: none; margin-top: 8px; }
+  .cert-list li { font-size: 9pt; padding: 2px 0 2px 14px; position: relative; }
+  .cert-list li::before {
+    content: '-';
+    position: absolute; left: 0;
+    color: var(--accent); font-weight: 700;
+  }
+  .cert-issuer { font-size: 8pt; color: var(--muted); }
+
+  /* LANGUAGES */
+  .lang-row { font-size: 9pt; line-height: 1.8; }
 
   @media print {
     body { background: white; padding: 0; }
@@ -187,15 +167,14 @@
 <body>
 <div class="page">
 
-  <!-- HEADER -->
+  <!-- HEADER — ATS-safe, no emoji -->
   <header class="header">
     <h1>Yogeswara Reddy Gondesi</h1>
-    <div class="title">Distribution Sales Manager &nbsp;·&nbsp; Power &amp; Industrial Electrical Products &nbsp;·&nbsp; Middle East</div>
+    <div class="title">Distribution Sales Manager &nbsp;|&nbsp; Power Distribution &amp; Industrial Controls &nbsp;|&nbsp; Middle East</div>
     <div class="contact">
-      <span>📍 Dubai, UAE</span>
-      <span>📞 <a href="tel:+971561678385">+971 56 167 8385</a></span>
-      <span>✉ <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
-      <span>🔗 <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364" target="_blank">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+      Dubai, UAE &nbsp;|&nbsp; +971 56 167 8385 &nbsp;|&nbsp;
+      <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a>
     </div>
   </header>
 
@@ -203,38 +182,39 @@
   <section class="summary">
     <div class="section-title">Professional Summary</div>
     <p>
-      Distribution Sales Manager with <strong>11+ years</strong> building and leading electrical product distribution
-      networks across the Middle East, with <strong>8+ years managing multi-country channel operations</strong> spanning
-      UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, and Lebanon. B.Tech in Electrical &amp; Electronics Engineering
-      (Distinction) — providing the technical foundation to credibly represent power distribution and industrial
-      controls products to engineers, consultants, and contractors across the region.
-      At OBO Bettermann MENA, managed a <strong>15+ distributor partner network</strong> across 9 markets, delivering
-      <span><strong>15–20% year-on-year channel revenue growth</strong></span> through structured channel strategy,
-      quarterly business reviews, distributor enablement programmes, and disciplined pipeline forecasting.
-      Proven ability to identify and appoint new distribution partners, define channel segmentation models,
-      execute performance-based partner programmes, and drive demand generation through the distributor network —
-      the exact distribution management mandate Eaton requires for its Power Distribution and Industrial Controls
-      business across the Middle East.
+      Distribution Sales Manager with 11+ years building and leading electrical product distribution networks across the Middle East,
+      with 8+ years managing multi-country channel operations across UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, and Lebanon.
+      Bachelor of Technology in Electrical and Electronics Engineering (Distinction) — providing the engineering foundation to
+      represent Power Distribution and Industrial Controls products to consultants, contractors, and end customers across the region.
+      Proven track record in channel and distribution strategy, partner identification and appointment, channel segmentation
+      and coverage modelling, and execution of performance-based partner programs that deliver annual sales targets and market
+      share growth. Skilled in conducting quarterly business reviews, distributor sales team training, demand generation and
+      joint marketing activities, commercial negotiation, inventory management, working capital optimisation, and credit management.
+      Brings strong commercial acumen, data-driven decision making, and cultural adaptability across Middle East markets.
     </p>
   </section>
 
-  <!-- CORE COMPETENCIES -->
+  <!-- CORE COMPETENCIES — single column via CSS columns, ATS-readable -->
   <section>
     <div class="section-title">Core Competencies</div>
-    <div class="competencies-grid">
-      <div class="competency-item">Distribution Channel Strategy &amp; Execution</div>
-      <div class="competency-item">Partner Identification, Appointment &amp; Development</div>
-      <div class="competency-item">Annual Sales Target &amp; Revenue Delivery</div>
-      <div class="competency-item">Quarterly Business Reviews (QBRs)</div>
-      <div class="competency-item">Channel Segmentation &amp; Coverage Modelling</div>
-      <div class="competency-item">Distributor Training &amp; Sales Enablement</div>
-      <div class="competency-item">Pipeline Forecasting &amp; CRM Management</div>
-      <div class="competency-item">Commercial Negotiation &amp; Annual Agreements</div>
-      <div class="competency-item">Inventory Management &amp; Working Capital</div>
-      <div class="competency-item">Pricing Strategy &amp; Margin Management</div>
-      <div class="competency-item">Demand Generation &amp; Joint Marketing</div>
-      <div class="competency-item">Middle East Multi-Country Territory (9 Markets)</div>
-    </div>
+    <ul class="competencies-list">
+      <li>Distribution Channel Strategy and Execution</li>
+      <li>Partner Identification, Appointment and Development</li>
+      <li>Channel Segmentation and Coverage Modelling</li>
+      <li>Performance-Based Partner Programs</li>
+      <li>Annual Sales Target Delivery and Revenue Management</li>
+      <li>Country-Level Sales Plans and Pipeline Management</li>
+      <li>Quarterly Business Reviews (QBRs) with Key Distributors</li>
+      <li>Distributor Sales Team Training and Enablement</li>
+      <li>Demand Generation and Joint Marketing Initiatives</li>
+      <li>Commercial Negotiation and Annual Agreement Management</li>
+      <li>Inventory Management and Working Capital Optimisation</li>
+      <li>Credit Management and Sales Policy Compliance</li>
+      <li>Market Trend Analysis, Competitive Analysis and Pricing Strategy</li>
+      <li>Brand Positioning and Project Business Support</li>
+      <li>Distributor Relationship Management</li>
+      <li>Data-Driven Decision Making and CRM Forecasting</li>
+    </ul>
   </section>
 
   <!-- PROFESSIONAL EXPERIENCE -->
@@ -243,60 +223,57 @@
 
     <div class="company-block">
       <div class="company-header">
-        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
-        <span class="company-location">Dubai, UAE &nbsp;|&nbsp; Electrical Infrastructure Products</span>
+        <span class="company-name">OBO Bettermann Middle East and North Africa FZCO</span>
+        <span class="company-sub">Dubai, UAE — Electrical Infrastructure Products</span>
       </div>
 
-      <!-- Role 1 -->
       <div class="role-block">
         <div class="role-header">
-          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-title">Manager, Technical and Strategic Sales</span>
           <span class="role-dates">Apr 2023 – Present</span>
         </div>
         <ul class="bullets">
-          <li><strong>Lead distribution strategy and channel execution</strong> across <span class="metric">9 Middle East markets</span> (UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, Lebanon) — defining channel segmentation, coverage models, and partner performance programmes for electrical infrastructure products across construction, industrial, and infrastructure verticals.</li>
-          <li>Manage a <span class="metric">15+ distributor partner network</span>, conducting <strong>Quarterly Business Reviews (QBRs)</strong> with key distributors to review performance against annual agreements, address gaps, and align on joint demand generation and marketing initiatives — driving <span class="metric">15–20% year-on-year channel revenue growth</span>.</li>
-          <li>Deliver annual sales targets across the region through <strong>country-level sales plans</strong> built in collaboration with country partners — monitoring pipeline accuracy and forecast quality via CRM (MS Dynamics) and adjusting resource allocation and partner priority in real time to protect delivery against annual targets.</li>
-          <li>Executed <span class="metric">3 major product launch GTM strategies</span>, identifying and appointing new distribution partners in previously untapped market segments, achieving <span class="metric">20–30% revenue growth</span> in new categories within the first year of each launch.</li>
-          <li>Negotiate <strong>annual commercial agreements and pricing terms</strong> with distribution partners — managing margin protection, credit terms, inventory obligations, and working capital parameters while maintaining long-term partner relationships across competitive markets.</li>
-          <li>Implement <strong>distributor sales team training programmes</strong> covering technical product knowledge, consultative selling, and CRM discipline — improving channel sales effectiveness and ensuring distributor teams can represent the product portfolio credibly to engineers, consultants, and contractors.</li>
-          <li>Drive <strong>compliance with company policies, credit management, and sales governance</strong> across the distributor network — enforcing agreed procedures and using digital tools to improve transparency, reporting accuracy, and process efficiency.</li>
-          <li>Present regional distribution performance, pipeline forecasts, and strategic recommendations to senior international leadership including the company's Management Board in Germany — sustained C-suite engagement on channel health, growth strategy, and investment priorities.</li>
+          <li>Develop and execute distribution strategy aligned with regional business goals across <span class="metric">9 Middle East markets</span> (UAE, Kuwait, KSA, Qatar, Bahrain, Oman, Egypt, Lebanon) — defining channel segmentation, coverage models, and performance-based partner programs for electrical infrastructure products across construction, industrial, and infrastructure verticals.</li>
+          <li>Identify, appoint and develop new distribution partners in untapped market segments; manage a <span class="metric">15+ distributor partner network</span> through structured quarterly business reviews (QBRs) that align partners to annual sales targets and joint demand generation and marketing initiatives.</li>
+          <li>Deliver annual sales targets through country-level sales plans built in collaboration with country partners, monitoring sales pipeline and forecast accuracy via CRM (MS Dynamics) and adjusting resource allocation to protect regional revenue targets — achieving <span class="metric">15–20% year-on-year channel revenue growth</span>.</li>
+          <li>Implement distributor sales team training programs covering technical product knowledge, consultative selling, and CRM discipline — strengthening distributor capability to represent the product portfolio to engineers, consultants, EPC contractors, and end customers.</li>
+          <li>Negotiate annual agreements and commercial terms with distribution partners — managing pricing strategy, margin protection, credit management, inventory levels, and working capital optimisation while maintaining long-term partner relationships across competitive Middle East markets.</li>
+          <li>Execute go-to-market strategies for <span class="metric">3 major new product launches</span>, conducting competitive analysis and pricing strategy to enter previously untapped segments — achieving <span class="metric">20–30% revenue growth</span> in new categories within the first year of each launch.</li>
+          <li>Support project business through the distributor network by engaging directly with consultants and contractors on technical specifications, strengthening brand positioning and driving specification wins on competitive projects.</li>
+          <li>Drive compliance with company sales policies, guidelines, and credit management procedures across the regional distributor network; oversee digital tool implementation to improve efficiency and performance reporting.</li>
+          <li>Present regional distribution performance, bookings forecasts, and strategic recommendations to senior international leadership including the Management Board in Germany — sustained executive-level engagement on channel health and growth strategy.</li>
         </ul>
       </div>
 
-      <!-- Role 2 -->
       <div class="role-block">
         <div class="role-header">
-          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-title">Assistant Manager, Technical and Sales</span>
           <span class="role-dates">Jan 2020 – Apr 2023</span>
         </div>
         <ul class="bullets">
-          <li><strong>Built a distribution network from zero</strong> for the TBS product vertical across 9 Middle East countries — identifying and appointing <span class="metric">7+ new distribution partners</span>, defining channel segmentation, and executing the go-to-market strategy that grew the vertical to <span class="metric">AED 2–5M in annual revenue</span> over three years, reaching ~70% of annual target by Year 3.</li>
-          <li>Established sub-distribution channels and retail partnerships across the UAE, growing the active partner base by ~20% and enabling broader market coverage for targeted product categories that were previously not served by the existing network.</li>
-          <li>Supported demand generation through the distributor network by conducting <strong>technical site visits, product seminars, and joint client engagements</strong> across the MENA region — building end-customer pull that drove distributor sell-through and strengthened brand positioning.</li>
-          <li>Collaborated directly with the Regional Director on market analysis, competitive pricing assessment, and strategic planning — feeding distributor-level insights into annual business planning and Management Board presentations in Germany.</li>
-          <li>Represented the company at international trade exhibitions (Light + Building, Frankfurt; The Big 5, Riyadh) — generating net-new distributor relationships and reinforcing brand presence in competitive Middle East markets.</li>
+          <li>Built distribution network from zero for the TBS product vertical across 9 Middle East markets — identified and appointed <span class="metric">7+ new distribution partners</span>, defined channel segmentation and coverage models, and executed performance-based partner program that grew the vertical to <span class="metric">AED 2–5M in annual revenue</span> within three years, reaching approximately 70% of annual sales target by Year 3.</li>
+          <li>Established sub-distribution channels and retail partnerships across the UAE, growing active partner count by approximately 20% and expanding market penetration into product categories previously not served by the distribution network.</li>
+          <li>Supported demand generation through the distributor network via technical site visits, product seminars, and joint client engagements across MENA — driving end-customer pull that improved distributor sell-through and strengthened brand positioning in competitive markets.</li>
+          <li>Collaborated with Regional Director on market trend analysis, competitive analysis, and pricing strategy — feeding distributor-level intelligence into annual business planning and executive presentations to the Management Board in Germany.</li>
+          <li>Represented the company at international trade exhibitions including Light and Building (Frankfurt) and The Big 5 (Riyadh) — generating new distributor relationships and reinforcing brand presence across the Middle East region.</li>
         </ul>
       </div>
 
-      <!-- Role 3 -->
       <div class="role-block">
         <div class="role-header">
           <span class="role-title">Senior Technical Sales Engineer / Technical Sales Engineer</span>
           <span class="role-dates">Jan 2018 – Dec 2019</span>
         </div>
         <ul class="bullets">
-          <li>Served as technical specialist for distributor partners, consultants, and EPC contractors — delivering product training, technical demonstrations, and project specification support across the UAE and GCC, building the channel credibility and client relationships that supported distribution growth in subsequent management roles.</li>
+          <li>Served as technical specialist for distribution partners, consultants, and EPC contractors — delivering product training, technical demonstrations, and project specification support across the UAE and GCC, building the channel credibility and client relationships that supported distribution growth in subsequent management roles.</li>
         </ul>
       </div>
     </div>
 
-    <!-- Cupra -->
     <div class="company-block">
       <div class="company-header">
         <span class="company-name">Cupra International</span>
-        <span class="company-location">Dubai, UAE</span>
+        <span class="company-sub">Dubai, UAE</span>
       </div>
       <div class="role-block">
         <div class="role-header">
@@ -304,66 +281,54 @@
           <span class="role-dates">Nov 2014 – Dec 2017</span>
         </div>
         <ul class="bullets">
-          <li>Managed technical B2B sales and distributor relationships for industrial and electrical product categories across the UAE — building the commercial discipline, channel management skills, and regional network that form the foundation of the subsequent distribution management career.</li>
+          <li>Managed technical B2B sales and distributor relationships for industrial and electrical product categories across the UAE — developing commercial acumen, distributor relationship management skills, and the regional network that form the foundation of the subsequent distribution management career.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- TECHNICAL SKILLS -->
+  <!-- TECHNICAL SKILLS — plain text for ATS -->
   <section>
     <div class="section-title">Technical Skills</div>
     <div class="skills-list">
-      <span class="skill-tag">Electrical Systems &amp; Power Distribution</span>
-      <span class="skill-tag">Earthing &amp; Lightning Protection (IEC 62305)</span>
-      <span class="skill-tag">Surge Protection Devices</span>
-      <span class="skill-tag">Industrial Controls &amp; Infrastructure</span>
-      <span class="skill-tag">CRM Pipeline Management</span>
-      <span class="skill-tag">Power BI &amp; Tableau</span>
-      <span class="skill-tag">Python &amp; SQL</span>
-      <span class="skill-tag">AI / Machine Learning</span>
-      <span class="skill-tag">AutoCAD</span>
-      <span class="skill-tag">MS Project</span>
+      Electrical Systems and Power Distribution | Earthing and Lightning Protection (IEC 62305, IEEE Std. 80) |
+      Surge Protection Devices | Industrial Controls and Infrastructure | CRM Pipeline Management (MS Dynamics) |
+      Sales Forecasting and Reporting | Power BI | Tableau | Python | SQL | AutoCAD | MS Project
     </div>
   </section>
 
-  <!-- EDUCATION + CERTIFICATIONS -->
+  <!-- EDUCATION -->
   <section>
-    <div class="section-title">Education &amp; Certifications</div>
-    <div class="two-col">
-      <div>
-        <div class="edu-item">
-          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering <em>(Distinction)</em></div>
-          <div class="edu-school">Amrita School of Engineering (Amrita Vishwa Vidyapeetham)</div>
-          <div class="edu-dates">2010 – 2014</div>
-        </div>
-        <div class="edu-item">
-          <div class="edu-degree">PG Diploma, Business Administration – Marketing <em>(Distinction)</em></div>
-          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
-          <div class="edu-dates">2019 – 2021</div>
-        </div>
-      </div>
-      <div>
-        <ul class="cert-list">
-          <li>Green Hydrogen &amp; Renewable Energy Certification <span class="cert-issuer">· Industry Certified</span></li>
-          <li>PMP® Certification Training <span class="cert-issuer">· The Knowledge Academy</span></li>
-          <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">· IIT Kanpur</span></li>
-          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">· Black Belt In Progress</span></li>
-        </ul>
-      </div>
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-degree">Bachelor of Technology, Electrical and Electronics Engineering (Distinction)</div>
+      <div class="edu-school">Amrita School of Engineering, Amrita Vishwa Vidyapeetham</div>
+      <div class="edu-dates">2010 – 2014</div>
     </div>
+    <div class="edu-item">
+      <div class="edu-degree">Post Graduate Diploma, Business Administration – Marketing (Distinction)</div>
+      <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+      <div class="edu-dates">2019 – 2021</div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section>
+    <div class="section-title">Certifications</div>
+    <ul class="cert-list">
+      <li>Green Hydrogen and Renewable Energy Certification <span class="cert-issuer">— Industry Certified</span></li>
+      <li>PMP Certification Training <span class="cert-issuer">— The Knowledge Academy</span></li>
+      <li>Advanced Certification in Artificial Intelligence and Machine Learning <span class="cert-issuer">— IIT Kanpur (2022–2023)</span></li>
+      <li>Lean Six Sigma Green Belt and Yellow Belt <span class="cert-issuer">— Black Belt In Progress</span></li>
+    </ul>
   </section>
 
   <!-- LANGUAGES -->
   <section>
     <div class="section-title">Languages</div>
     <div class="lang-row">
-      <span class="lang-item">English <span class="lang-level">(Full Professional)</span></span>
-      <span class="lang-item">Hindi <span class="lang-level">(Fluent)</span></span>
-      <span class="lang-item">Telugu <span class="lang-level">(Native)</span></span>
-      <span class="lang-item">Arabic <span class="lang-level">(Elementary)</span></span>
-      <span class="lang-item">Malayalam <span class="lang-level">(Conversational)</span></span>
-      <span class="lang-item">Tamil <span class="lang-level">(Conversational)</span></span>
+      English (Full Professional) &nbsp;|&nbsp; Hindi (Fluent) &nbsp;|&nbsp; Telugu (Native) &nbsp;|&nbsp;
+      Arabic (Elementary) &nbsp;|&nbsp; Malayalam (Conversational) &nbsp;|&nbsp; Tamil (Conversational)
     </div>
   </section>
 
