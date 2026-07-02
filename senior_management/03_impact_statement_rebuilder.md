@@ -58,9 +58,7 @@ Before/after transformations applied across the three resumes. Where your origin
 ## Resolved
 1. **Team size** — confirmed: a 4-person in-house team, plus weekly-reviewed oversight of on-ground distributor sales staff, for an effective 15-person front-line sales force. Now reflected in the proof-strip, summary, and a dedicated bullet in all three resumes.
 2. **Certification issuer** — confirmed: IESD India, for the Green Hydrogen, Green Ammonia & Renewable Energy credential. Now cited by name in `resume_energy_transition.html` (previously "Industry Certified").
-3. **Largest deal value** — confirmed: €1.2M for a single order, the strongest deal-size signal in the resumes. Now in the proof-strip and the commercial-negotiation bullet of all three resumes.
+3. **Largest deal value and portfolio size** — confirmed: €1.2M for the single largest order closed, within a distributor agreement portfolio worth €5M annually. This is now the P&L-scale anchor across all three resumes (proof-strip, summary, and the commercial-negotiation bullet) — the single most important addition for Director/VP-BD positioning, since it answers "how much business does this person actually own" in one line.
 
 ## Still open (answer any you can, I'll fold them in)
-1. **Budget/revenue size you influence**: Even a range (e.g., "multi-million-AED regional channel revenue") strengthens the P&L narrative without needing an exact figure.
-2. **Context on the €1.2M order**: customer/deal type (distributor annual agreement vs. a single project specification win) and roughly when it closed — would let me sharpen the bullet further (e.g., "the largest project specification win in the vertical's three-year history").
-3. **Time-to-market or efficiency metrics** — did any of the 3 product launches or the digital-tool rollout reduce a cycle time (e.g., quote turnaround, partner onboarding time)? Efficiency metrics are highly valued at senior levels and currently absent.
+1. **Time-to-market or efficiency metrics** — did any of the 3 product launches or the digital-tool rollout reduce a cycle time (e.g., quote turnaround, partner onboarding time)? Efficiency metrics are highly valued at senior levels and currently absent.

@@ -30,7 +30,7 @@ You asked me to decide rather than guess blind, so: **don't embed a photo in the
 ## Resolved
 - **Certification issuer confirmed:** IESD India, for the Green Hydrogen/Green Ammonia/Renewable Energy credential — updated in `resume_energy_transition.html` and no longer a placeholder.
 - **Team leadership scope confirmed:** a 4-person in-house team, plus weekly-reviewed oversight of on-ground distributor sales staff — effectively a 15-person front-line sales force. This is now reflected in the proof-strip, summary, and a dedicated bullet in all three resumes.
-- **Largest single order confirmed:** €1.2M — added to the proof-strip and to the commercial-negotiation bullet in all three resumes. This is the single strongest deal-size signal in the current draft; if you have the customer/deal type (distributor annual agreement vs. project specification win) or the year it closed, it can be sharpened further.
+- **Portfolio size and largest order confirmed:** a €5M annual distributor agreement portfolio, including the largest single order closed at €1.2M. This is now the P&L-scale anchor in the proof-strip, summary, and commercial-negotiation bullet of all three resumes and the LinkedIn About rewrite — it directly answers the "how much business does this person actually own" question that Director/VP-BD-level readers screen for first.
 
 ## Open items before final submission
 Once you have a live job description for a specific role, send it over — I'll run a one-to-one ATS gap check against that JD rather than the generic mapping in `02_ats_keyword_optimization.md`.
