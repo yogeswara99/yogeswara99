@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume (Senior Management, Energy Transition)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:   #143332;
+    --accent: #0E8A7D;
+    --text:   #1A1A1A;
+    --muted:  #555;
+    --rule:   #BFE3DE;
+    --tag-bg: #EAF7F5;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 9.5pt;
+    line-height: 1.5;
+    color: var(--text);
+    background: #E2EEEC;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 52px 48px;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+  }
+
+  .header {
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    border-bottom: 3px solid var(--accent);
+  }
+  .header h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 27pt;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+  .header .title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  .contact {
+    font-size: 8.5pt;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .contact a { color: var(--muted); text-decoration: none; }
+
+  .proof-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .proof-item {
+    background: var(--tag-bg);
+    border-left: 3px solid var(--accent);
+    padding: 6px 12px;
+    font-size: 8.3pt;
+    color: var(--navy);
+    font-weight: 500;
+  }
+  .proof-item strong { font-weight: 700; }
+
+  section { margin-top: 17px; }
+  .section-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 1.5px solid var(--rule);
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+
+  .summary p { font-size: 9.5pt; line-height: 1.65; }
+
+  .competencies-list { list-style: none; padding: 0; column-count: 2; column-gap: 32px; }
+  .competencies-list li {
+    font-size: 9pt;
+    padding: 2px 0 2px 12px;
+    position: relative;
+    break-inside: avoid;
+  }
+  .competencies-list li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .company-block { margin-bottom: 16px; }
+  .company-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2px;
+  }
+  .company-name { font-size: 10pt; font-weight: 700; color: var(--navy); }
+  .company-sub { font-size: 8.5pt; color: var(--muted); font-style: italic; }
+
+  .role-block { margin-bottom: 10px; }
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 8px; margin-bottom: 5px;
+    padding: 5px 10px;
+    background: var(--tag-bg);
+    border-left: 3px solid var(--accent);
+  }
+  .role-title { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .role-dates { font-size: 8.5pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+
+  ul.bullets { list-style: none; padding-left: 0; }
+  ul.bullets li {
+    font-size: 9pt; line-height: 1.55;
+    padding: 2px 0 2px 14px;
+    position: relative;
+  }
+  ul.bullets li::before {
+    content: '-';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .metric { font-weight: 600; color: var(--navy); }
+
+  .early-career { font-size: 9pt; line-height: 1.55; color: var(--text); }
+  .early-career .role-line { font-weight: 600; color: var(--navy); }
+  .early-career .role-dates { color: var(--muted); font-weight: 500; }
+
+  .skills-list { font-size: 9pt; line-height: 1.8; color: var(--text); }
+
+  .edu-item { margin-bottom: 10px; }
+  .edu-degree { font-size: 9.5pt; font-weight: 600; color: var(--navy); }
+  .edu-school { font-size: 9pt; color: var(--muted); font-style: italic; }
+  .edu-dates { font-size: 8.5pt; color: var(--muted); }
+
+  .cert-list { list-style: none; margin-top: 4px; }
+  .cert-list li { font-size: 9pt; padding: 2px 0 2px 14px; position: relative; }
+  .cert-list li::before {
+    content: '-';
+    position: absolute; left: 0;
+    color: var(--accent); font-weight: 700;
+  }
+  .cert-issuer { font-size: 8pt; color: var(--muted); }
+
+  .lang-row { font-size: 9pt; line-height: 1.8; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; padding: 26px 40px 32px; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER
+    Alternate title-line options (swap the single .title div below to match a specific posting):
+    1) DIRECTOR, BUSINESS DEVELOPMENT  |  ENERGY TRANSITION & INDUSTRIAL DECARBONIZATION  |  MENA
+    2) REGIONAL SALES DIRECTOR  |  INDUSTRIAL ELECTRIFICATION & ENERGY TRANSITION
+    3) VP / HEAD OF BUSINESS DEVELOPMENT  |  RENEWABLES & GREEN HYDROGEN  |  MENA
+    Target firms: Siemens Energy, GE Vernova, Honeywell (Sustainability/Energy division), ABB Energy Industries.
+
+    IMPORTANT — before using this version, confirm the real issuing body/platform for the "Green Hydrogen,
+    Green Ammonia & Renewable Energy" certification and replace the [CONFIRM ISSUER] placeholder below.
+    An unnamed "industry certified" tag reads as unverifiable to a senior recruiter — see diagnostic report.
+
+    PHOTO: optional — see README for guidance on when to include one for this variant.
+  -->
+  <header class="header">
+    <h1>Yogeswara Reddy Gondesi</h1>
+    <div class="title">Director, Business Development &nbsp;|&nbsp; Energy Transition &amp; Industrial Electrification &nbsp;|&nbsp; MENA</div>
+    <div class="contact">
+      Dubai, UAE &nbsp;|&nbsp; +971 56 167 8385 &nbsp;|&nbsp;
+      <a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a> &nbsp;|&nbsp;
+      <a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a>
+    </div>
+    <div class="proof-strip">
+      <div class="proof-item"><strong>11+ yrs</strong> industrial B2B channel leadership</div>
+      <div class="proof-item">Certified: <strong>Green Hydrogen, Green Ammonia &amp; Renewable Energy</strong></div>
+      <div class="proof-item"><strong>15&ndash;20%</strong> YoY channel revenue growth</div>
+      <div class="proof-item">B.Tech <strong>Electrical &amp; Electronics Engineering</strong></div>
+      <div class="proof-item">Reports to <strong>Management Board</strong> (Germany HQ)</div>
+    </div>
+  </header>
+
+  <section class="summary">
+    <div class="section-title">Professional Summary</div>
+    <p>
+      Industrial B2B sales and channel leader with <strong>11+ years</strong> building distribution and client networks
+      across the GCC, Levant, and North Africa, now building toward Director-level roles at the intersection of
+      industrial channel leadership and the region's energy transition. Currently Manager, Technical &amp; Strategic
+      Sales for a multinational electrical infrastructure manufacturer, owning a <strong>15+ partner distributor
+      network</strong> across 8 countries and delivering <strong>15&ndash;20% year-on-year channel revenue growth</strong>,
+      with direct reporting exposure to senior international leadership including the company's Management Board in
+      Germany. Engineering-trained (B.Tech, Electrical &amp; Electronics Engineering) with a business qualification
+      (PG Diploma, Business Administration &ndash; Marketing) and certification in <strong>Green Hydrogen, Green
+      Ammonia, and Renewable Energy</strong>, bringing both a proven commercial/channel playbook and a deliberately
+      built technical foundation in decarbonization and industrial electrification to energy-transition client
+      conversations. Skilled in CRM-governed forecasting, commercial negotiation, and cross-functional stakeholder
+      alignment across multi-country, matrixed organizations — capabilities directly transferable to a technically
+      complex, standards-driven energy-transition portfolio.
+    </p>
+  </section>
+
+  <section>
+    <div class="section-title">Core Competencies</div>
+    <ul class="competencies-list">
+      <li>Energy Transition &amp; Industrial Electrification</li>
+      <li>Green Hydrogen &amp; Renewable Energy Fundamentals</li>
+      <li>Regional Channel Strategy &amp; Distributor Development</li>
+      <li>Business Target Agreement (BTA) / AOP Planning</li>
+      <li>CRM-Led Bookings Forecasting (MS Dynamics)</li>
+      <li>Industrial Client Engagement &amp; Negotiation</li>
+      <li>Compliance &amp; Sales Governance</li>
+      <li>Market Segmentation &amp; Strategic Positioning</li>
+      <li>Cross-Functional &amp; Multi-Country Stakeholder Alignment</li>
+      <li>Team Coaching, Development &amp; Performance Management</li>
+      <li>Go-to-Market Strategy &amp; New Category Launch</li>
+      <li>Technical Consultative Selling (EPC / Consultant Engagement)</li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-title">Professional Experience</div>
+
+    <div class="company-block">
+      <div class="company-header">
+        <span class="company-name">OBO Bettermann Middle East &amp; North Africa FZCO</span>
+        <span class="company-sub">Dubai, UAE</span>
+      </div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Manager – Technical &amp; Strategic Sales</span>
+          <span class="role-dates">Apr 2023 – Present</span>
+        </div>
+        <ul class="bullets">
+          <li>Lead regional sales activities across <span class="metric">8 MENA markets</span>, developing and executing annual sales targets and channel strategy — achieving <span class="metric">15&ndash;20% year-on-year channel revenue growth</span>.</li>
+          <li>Maintain accurate regional forecasts using CRM-driven pipeline management (MS Dynamics), overseeing the coaching and performance of the distributor-facing sales team to ensure country and regional growth targets are met.</li>
+          <li>Manage and enforce sales policies, governance, and compliance procedures across the regional partner network, driving adoption of digital tools to improve pipeline visibility and performance reporting.</li>
+          <li>Executed <span class="metric">3 major product launch</span> go-to-market strategies with <span class="metric">20&ndash;30% revenue growth</span> in new categories — direct, transferable experience for introducing a new (energy-transition) portfolio into an established distributor and client network.</li>
+          <li>Lead client engagement, commercial negotiation, and issue resolution at senior levels across the GCC, Levant, and North Africa, serving as primary commercial point of contact on competitive projects.</li>
+          <li>Present bookings performance, pipeline forecasts, and strategic recommendations to senior international leadership including the company's <span class="metric">Management Board in Germany</span>.</li>
+        </ul>
+      </div>
+
+      <div class="role-block">
+        <div class="role-header">
+          <span class="role-title">Assistant Manager – Technical &amp; Sales</span>
+          <span class="role-dates">Jan 2020 – Apr 2023</span>
+        </div>
+        <ul class="bullets">
+          <li>Built a new product vertical from <strong>zero market presence</strong> to an established, sustainably growing revenue line within three years — reaching <span class="metric">~70% of annual target by Year 3</span> — appointing <span class="metric">7+ new distribution partners</span> across the region.</li>
+          <li>Collaborated with the Regional Director on market planning, data analysis, and executive reporting to the company's Management Board in Germany — direct exposure to multi-country governance and performance accountability.</li>
+          <li>Represented the company at major international industry exhibitions (Light + Building, Frankfurt; The Big 5, Riyadh), generating new client and partner relationships across the region.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="early-career">
+      <div class="section-title" style="margin-top:2px; margin-bottom:8px; border:none; font-size:7pt;">Earlier Career</div>
+      <p><span class="role-line">Senior Technical Sales Engineer / Technical Sales Engineer</span>, OBO Bettermann MENA FZCO — <span class="role-dates">Jan 2018 – Dec 2019</span></p>
+      <p><span class="role-line">Senior Sales Engineer / Sales Engineer</span>, Cupra International, Dubai — <span class="role-dates">Nov 2014 – Dec 2017</span></p>
+      <p style="margin-top:4px;">Built the industrial client relationships and technical consultative-selling foundation — spanning electrical infrastructure and industrial product categories — that underpins the subsequent channel-leadership career and the pivot toward energy-transition client engagement.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Skills &amp; Tools</div>
+    <div class="skills-list">
+      Green Hydrogen &amp; Green Ammonia Fundamentals | Renewable Energy | CRM Pipeline Management (MS Dynamics) |
+      Bookings Forecasting | Power BI | Tableau | Python &amp; SQL | AI / Machine Learning | MS Project | AutoCAD
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-degree">Bachelor of Technology, Electrical &amp; Electronics Engineering (Distinction)</div>
+      <div class="edu-school">Amrita School of Engineering, Amrita Vishwa Vidyapeetham</div>
+      <div class="edu-dates">2010 – 2014</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-degree">PG Diploma, Business Administration – Marketing (Distinction)</div>
+      <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+      <div class="edu-dates">2019 – 2021</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">Certifications</div>
+    <ul class="cert-list">
+      <li>Green Hydrogen, Green Ammonia &amp; Renewable Energy <span class="cert-issuer">— [CONFIRM ISSUER/PLATFORM NAME]</span></li>
+      <li>Advanced Certification in AI &amp; Machine Learning <span class="cert-issuer">— IIT Kanpur (2022–2023)</span></li>
+      <li>PMP® Certification Training <span class="cert-issuer">— The Knowledge Academy</span></li>
+      <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">— The Knowledge Academy (Black Belt in progress)</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="section-title">Languages</div>
+    <div class="lang-row">
+      English (Full Professional) &nbsp;|&nbsp; Hindi (Fluent) &nbsp;|&nbsp; Telugu (Native) &nbsp;|&nbsp;
+      Arabic (Elementary) &nbsp;|&nbsp; Malayalam (Conversational) &nbsp;|&nbsp; Tamil (Conversational)
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
