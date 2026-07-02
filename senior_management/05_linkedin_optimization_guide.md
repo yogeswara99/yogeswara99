@@ -23,9 +23,11 @@ Set this to recruiter-only visibility (not public) with your target titles liste
 **Rewrite (first person, LinkedIn convention):**
 > I lead regional sales and channel strategy for a multinational electrical infrastructure manufacturer, owning distributor performance across 8 GCC, Levant, and North Africa markets. Over 11+ years — the last 6+ in management — I've built a 15+ partner distribution network from the ground up, delivered 15–20% year-on-year channel revenue growth, and taken a new product line from zero market presence to ~70% of its annual target within three years.
 >
+> I lead a 4-person in-house team and, through weekly performance reviews, effectively direct a 15-person front-line sales force spanning in-house and on-ground distributor staff.
+>
 > My background bridges engineering and commerce: a B.Tech in Electrical & Electronics Engineering gives me technical credibility with consultants and EPC contractors; a postgraduate diploma in Business Administration (Marketing) gives me the commercial discipline to run channel P&L, pricing, and CRM-led forecasting. I report directly into senior international leadership, including our Management Board in Germany, on regional growth strategy.
 >
-> I'm certified in Green Hydrogen, Green Ammonia, and Renewable Energy, and I'm actively building toward roles at the intersection of industrial channel leadership and the region's energy transition.
+> I'm certified in Green Hydrogen, Green Ammonia, and Renewable Energy (IESD India), and I'm actively building toward roles at the intersection of industrial channel leadership and the region's energy transition.
 >
 > Open to Regional Sales Director, Country Manager, and Head of Business Development mandates with top-tier industrial and energy organizations across the UAE and wider GCC.
 

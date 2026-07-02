@@ -55,9 +55,11 @@ Before/after transformations applied across the three resumes. Where your origin
 
 ---
 
-## Follow-up questions to sharpen these further (answer any you can, I'll fold them in)
-1. **Team size**: How many people, if any, report to you directly or indirectly (distributor sales staff you train don't count as direct reports unless they're on your P&L) — a Director-level resume should state headcount if you have any people-management scope beyond distributor coaching.
-2. **Budget/revenue size you influence**: Even a range (e.g., "multi-million-AED regional channel revenue") strengthens the P&L narrative without needing an exact figure.
-3. **The "Green Hydrogen and Renewable Energy Certification"** — what's the actual issuing platform/body (Coursera course name, university, industry body)? I need the real name to cite it credibly instead of "Industry Certified."
-4. **Any deal size or contract value** you can point to (largest single distributor agreement, largest project specification win) — even approximate, this is the single most persuasive number type for BD-titled roles.
-5. **Time-to-market or efficiency metrics** — did any of the 3 product launches or the digital-tool rollout reduce a cycle time (e.g., quote turnaround, partner onboarding time)? Efficiency metrics are highly valued at senior levels and currently absent.
+## Resolved
+1. **Team size** — confirmed: a 4-person in-house team, plus weekly-reviewed oversight of on-ground distributor sales staff, for an effective 15-person front-line sales force. Now reflected in the proof-strip, summary, and a dedicated bullet in all three resumes.
+2. **Certification issuer** — confirmed: IESD India, for the Green Hydrogen, Green Ammonia & Renewable Energy credential. Now cited by name in `resume_energy_transition.html` (previously "Industry Certified").
+
+## Still open (answer any you can, I'll fold them in)
+1. **Budget/revenue size you influence**: Even a range (e.g., "multi-million-AED regional channel revenue") strengthens the P&L narrative without needing an exact figure.
+2. **Any deal size or contract value** you can point to (largest single distributor agreement, largest project specification win) — even approximate, this is the single most persuasive number type for BD-titled roles.
+3. **Time-to-market or efficiency metrics** — did any of the 3 product launches or the digital-tool rollout reduce a cycle time (e.g., quote turnaround, partner onboarding time)? Efficiency metrics are highly valued at senior levels and currently absent.
