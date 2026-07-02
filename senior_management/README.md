@@ -29,11 +29,11 @@ You asked me to decide rather than guess blind, so: **don't embed a photo in the
 
 ## Resolved
 - **Certification issuer confirmed:** IESD India, for the Green Hydrogen/Green Ammonia/Renewable Energy credential — updated in `resume_energy_transition.html` and no longer a placeholder.
-- **Team leadership scope confirmed:** a 4-person in-house team, plus weekly-reviewed oversight of on-ground distributor sales staff — effectively a 15-person front-line sales force. This is now reflected in the proof-strip, summary, and a dedicated bullet in all three resumes, since headcount is one of the highest-value signals a Director-level reader looks for.
+- **Team leadership scope confirmed:** a 4-person in-house team, plus weekly-reviewed oversight of on-ground distributor sales staff — effectively a 15-person front-line sales force. This is now reflected in the proof-strip, summary, and a dedicated bullet in all three resumes.
+- **Largest single order confirmed:** €1.2M — added to the proof-strip and to the commercial-negotiation bullet in all three resumes. This is the single strongest deal-size signal in the current draft; if you have the customer/deal type (distributor annual agreement vs. project specification win) or the year it closed, it can be sharpened further.
 
 ## Open items before final submission
-1. **Any deal size or largest single contract/specification win** you can point to, even approximately — still the highest-leverage number missing from the current drafts.
-2. Once you have a live job description for a specific role, send it over — I'll run a one-to-one ATS gap check against that JD rather than the generic mapping in `02_ats_keyword_optimization.md`.
+Once you have a live job description for a specific role, send it over — I'll run a one-to-one ATS gap check against that JD rather than the generic mapping in `02_ats_keyword_optimization.md`.
 
 ## Note on the existing `resume_eaton.html` / `resume_siemens.html` files in the repo root
 Those earlier drafts are what this diagnostic was run against — the inconsistent years-of-experience figures and the unnamed "Industry Certified" credential originated there. The new files in this folder supersede them for senior-management positioning; the originals are left untouched in case you still need them for the specific applications they were built for.
