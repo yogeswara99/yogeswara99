@@ -170,9 +170,13 @@
 
   .lang-row { font-size: 9pt; line-height: 1.8; }
 
+  @page { size: A4; margin: 9mm 11mm; }
   @media print {
-    body { background: white; padding: 0; }
-    .page { box-shadow: none; padding: 26px 40px 32px; max-width: 100%; }
+    body { background: white; padding: 0; font-size: 9pt; }
+    .page { box-shadow: none; padding: 0; max-width: 100%; }
+    section { margin-top: 13px; }
+    .company-block { margin-bottom: 12px; }
+    .role-block { margin-bottom: 8px; }
   }
 </style>
 </head>

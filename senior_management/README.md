@@ -14,9 +14,14 @@ This folder contains everything requested: three tailored Senior Management resu
 | `03_impact_statement_rebuilder.md` | Before/after bullet rewrites, plus follow-up questions to sharpen further (Exercise 4). |
 | `04_market_positioning_notes.md` | How each target-firm cluster hires, and why the three variants are framed the way they are (Exercise 5). |
 | `05_linkedin_optimization_guide.md` | Section-by-section LinkedIn rewrite. |
+| `export/*.pdf` | Final, ready-to-send PDFs — the designed/colored version of each variant, rendered from the `.html` files. |
+| `export/*.docx` | Final, ready-to-send Word versions — same content, rebuilt as a clean, editable, ATS-native Word document (see note below on why these look plainer than the PDFs). |
+| `build_docx.py` / `generate_docx.py` | The scripts that generate the `.docx` files, kept for reproducibility if content changes again — run `python3 generate_docx.py` from this folder after editing `generate_docx.py`'s content blocks. |
 
 ## How to use the resumes
-Open any `.html` file in a browser, then Print → Save as PDF (or "Microsoft Print to PDF"). All three are single-page, print-tuned, and use ATS-safe structure (no tables, no icons in the parseable body, standard section headers).
+- **PDF (`export/*.pdf`):** ready to send as-is — this is the fully designed, colored version of each variant, one per sector.
+- **DOCX (`export/*.docx`):** ready to send as-is, or to edit directly in Word — deliberately built as a clean, single-column, no-tables-no-textboxes document rather than a literal conversion of the styled HTML/PDF. This is intentional: heavily styled CSS (flex layouts, gradients, background badges) doesn't survive HTML→Word conversion reliably, and many corporate ATS portals and recruiters specifically prefer a plain, simply-formatted Word file over a "designed" one. Content, figures, and wording are identical to the PDF; only the visual styling is simpler.
+- The `.html` source files remain in this folder too if you want to regenerate a PDF yourself later (open in a browser, Print → Save as PDF) after any manual edits.
 
 **Title swapping:** each file's `<header>` has an HTML comment listing 3–4 alternate title lines for that variant, matching your four target titles (Regional Sales Director, Country Manager/GM, VP/Head of BD, Channel/Distribution Director). Swap the single `.title` div text to match how a specific job posting titles the role — nothing else needs to change.
 
