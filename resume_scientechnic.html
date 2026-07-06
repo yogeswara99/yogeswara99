@@ -186,39 +186,45 @@
   .company-name { font-size: 11pt; font-weight: 700; color: var(--navy); }
   .company-sub { font-size: 8.6pt; color: var(--muted); font-style: italic; }
 
-  .role-block { margin-bottom: 12px; position: relative; padding-left: 16px; border-left: 2px solid var(--gold); }
-  .role-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
-  .role-title { font-size: 9.8pt; font-weight: 700; color: var(--navy2); }
-  .role-dates { font-size: 8.4pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+  .role-block { margin-bottom: 9px; position: relative; padding-left: 16px; border-left: 2px solid var(--gold); break-inside: avoid; page-break-inside: avoid; }
+  .role-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; }
+  .role-title { font-size: 9.6pt; font-weight: 700; color: var(--navy2); }
+  .role-dates { font-size: 8.2pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
 
   ul.bullets { list-style: none; }
   ul.bullets li {
-    font-size: 9.2pt; line-height: 1.58;
-    padding: 2px 0 2px 13px;
+    font-size: 9pt; line-height: 1.48;
+    padding: 1px 0 1px 13px;
     position: relative;
     color: var(--text);
   }
   ul.bullets li::before {
     content: '▸';
-    position: absolute; left: 0; top: 2px;
+    position: absolute; left: 0; top: 1px;
     color: var(--gold2); font-size: 8pt;
   }
   .metric { font-weight: 700; color: var(--navy); }
 
   .early-career {
-    margin-top: 16px;
+    margin-top: 12px;
     background: var(--sidebar-bg);
     border-left: 3px solid var(--gold);
-    padding: 12px 16px;
+    padding: 10px 16px;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
-  .early-career .role-line { font-size: 9pt; font-weight: 600; color: var(--navy); }
-  .early-career .role-dates { font-size: 8.3pt; color: var(--muted); }
-  .early-career p { font-size: 8.9pt; margin-top: 6px; color: var(--text); line-height: 1.5; }
+  .early-career .role-line { font-size: 8.8pt; font-weight: 600; color: var(--navy); }
+  .early-career .role-dates { font-size: 8.1pt; color: var(--muted); }
+  .early-career p { font-size: 8.7pt; margin-top: 5px; color: var(--text); line-height: 1.45; }
 
   @media print {
-    @page { size: A4; margin: 8mm; }
-    body { background: #fff; padding: 0; }
+    @page { size: A4; margin: 7mm; }
+    body { background: #fff; padding: 0; font-size: 9.3pt; }
     .page { box-shadow: none; max-width: 100%; }
+    .summary p { font-size: 9.2pt; line-height: 1.58; }
+    .header { padding: 24px 36px; }
+    .main { padding: 20px 34px 26px 28px; }
+    .sidebar { padding: 20px 20px 26px; }
   }
 </style>
 </head>
@@ -252,6 +258,7 @@
     <div class="proof-item"><strong>11+ yrs</strong> technical B2B sales, GCC</div>
     <div class="proof-item"><strong>Preferred-vendor</strong> status sustained with regional consultants</div>
     <div class="proof-item"><strong>15-person</strong> multi-vertical sales force led</div>
+    <div class="proof-item"><strong>€5.5M</strong> FY26 collective target (~AED 31M end-user)</div>
     <div class="proof-item"><strong>€5M</strong> annual portfolio &middot; <strong>€1.2M</strong> largest single order</div>
     <div class="proof-item">B.Tech <strong>Electrical &amp; Electronics Engineering</strong></div>
   </div>
@@ -340,10 +347,13 @@
           GCC. Proven track record achieving and sustaining <strong>preferred/approved-vendor status</strong> with
           regional consulting firms, architects, and MEP planners — the exact mechanism through which a technical
           product range gets vendor-listed, specified, and ultimately purchased on a project. Currently Manager,
-          Technical &amp; Strategic Sales for a multinational electrical infrastructure manufacturer, where I
-          guide and coach a <strong>15-person front-line sales force</strong> (4 direct reports plus distributor
-          sales teams reviewed weekly) across multiple product categories — working alongside each team on live
-          opportunities to convert pipeline into closed sales against monthly and annual KPI targets. Skilled in
+          Technical &amp; Strategic Sales for a multinational electrical infrastructure manufacturer, where I own a
+          collective sales target of <strong>€5.5M</strong> (approx. <strong>AED 31M</strong> end-user project
+          value) for FY2026 — up from <strong>€4.9M</strong> (approx. <strong>AED 27M</strong>) delivered in
+          FY2025 — set and tracked jointly with the <strong>Director of Sales, MENA region</strong>, and guide and
+          coach a <strong>15-person front-line sales force</strong> (4 direct reports plus distributor sales teams
+          reviewed weekly) across multiple product categories — working alongside each team on live opportunities
+          to convert pipeline into closed sales against monthly and annual KPI targets. Skilled in
           translating complex technical specifications (earthing, lightning and surge protection to
           <strong>IEC 62305 / IEEE Std. 80</strong>) into consultant-facing technical presentations, product
           demonstrations, and go-to-market strategy — having planned and executed the strategic technical selling
@@ -370,6 +380,8 @@
             <span class="role-dates">Apr 2023 – Present</span>
           </div>
           <ul class="bullets">
+            <li>Own a collective sales target of <span class="metric">€5.5M</span> (approx. <span class="metric">AED 31M</span> end-user project value) for FY2026 — including a <span class="metric">€3M</span> (approx. <span class="metric">AED 18M</span>) component — set and tracked jointly with the <span class="metric">Director of Sales, MENA region</span>.</li>
+            <li>Delivered FY2025 collective turnover of <span class="metric">€4.9M</span> (approx. <span class="metric">AED 27M</span> end-user project value), including <span class="metric">€2.7M</span> (approx. <span class="metric">AED 16M</span>) — the base year against which the FY2026 target above represents continued growth.</li>
             <li>Achieve and sustain <span class="metric">preferred/approved-vendor status</span> with regional consultants, architects, and EPC contractors across 8 GCC, Levant, and North Africa markets — the foundation for consistent project specification and vendor-list inclusion of the company's earthing, lightning, and surge protection product range.</li>
             <li>Guide and coach a <span class="metric">15-person front-line sales force</span> (4 direct reports plus distributor sales teams, reviewed weekly) across multiple product verticals — working alongside teams on live opportunities to convert pipeline into closed sales against monthly and annual KPI targets.</li>
             <li>Plan and execute strategic technical selling programmes for <span class="metric">3 major new product launches</span> — translating engineering specifications into consultant-facing technical presentations and demonstrations — delivering <span class="metric">20–30% revenue growth</span> in each new category within its first year.</li>
