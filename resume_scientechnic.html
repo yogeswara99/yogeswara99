@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yogeswara Reddy Gondesi — Resume (Scientechnic)</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #16233A;
+    --navy2:   #1E2F4D;
+    --gold:    #C6A15B;
+    --gold2:   #A9873F;
+    --text:    #1D1D1D;
+    --muted:   #5A6472;
+    --sidebar-bg: #F3F1EC;
+    --rule:    #E1DCCB;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    font-size: 10pt;
+    line-height: 1.55;
+    color: var(--text);
+    background: #DDE1E6;
+    padding: 32px 16px;
+  }
+
+  .page {
+    background: #fff;
+    max-width: 880px;
+    margin: 0 auto;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.16);
+  }
+
+  /* ===== HEADER BAND ===== */
+  .header {
+    background: linear-gradient(120deg, var(--navy) 0%, var(--navy2) 100%);
+    color: #fff;
+    padding: 34px 44px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+  }
+  .photo-wrap {
+    flex: 0 0 auto;
+    width: 108px; height: 108px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2A3B5C;
+  }
+  .photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-wrap .monogram {
+    font-family: 'EB Garamond', serif;
+    font-size: 34pt;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .header-text h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 26pt;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    line-height: 1.15;
+  }
+  .header-text .title {
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    margin-top: 5px;
+  }
+  .header-text .subtitle {
+    font-size: 9pt;
+    color: #C9D2E0;
+    margin-top: 3px;
+    letter-spacing: 0.5px;
+  }
+  .header-text .contact {
+    margin-top: 10px;
+    font-size: 8.8pt;
+    color: #DCE2EC;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 18px;
+  }
+  .header-text .contact a { color: #DCE2EC; text-decoration: none; }
+
+  /* ===== PROOF STRIP ===== */
+  .proof-strip {
+    display: flex;
+    background: #0F1A2C;
+    padding: 12px 44px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .proof-item {
+    font-size: 8.3pt;
+    color: #EDEBE2;
+    background: rgba(198,161,91,0.14);
+    border: 1px solid rgba(198,161,91,0.4);
+    border-radius: 3px;
+    padding: 5px 11px;
+  }
+  .proof-item strong { color: var(--gold); font-weight: 700; }
+
+  /* ===== BODY: sidebar + main ===== */
+  .body-wrap { display: flex; }
+  .sidebar {
+    flex: 0 0 258px;
+    background: var(--sidebar-bg);
+    padding: 26px 24px 34px;
+    border-right: 1px solid var(--rule);
+  }
+  .main {
+    flex: 1;
+    padding: 26px 40px 34px 34px;
+  }
+
+  .side-title, .main-title {
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .side-title { border-bottom: 2px solid var(--gold); padding-bottom: 5px; }
+  .main-title { border-bottom: 2px solid var(--gold); padding-bottom: 5px; }
+  .side-block { margin-bottom: 22px; }
+
+  .side-list { list-style: none; }
+  .side-list li {
+    font-size: 8.9pt;
+    padding: 3px 0 3px 13px;
+    position: relative;
+    color: var(--text);
+    line-height: 1.5;
+  }
+  .side-list li::before {
+    content: '–';
+    position: absolute; left: 0; top: 3px;
+    color: var(--gold2); font-weight: 700;
+  }
+
+  .edu-item { margin-bottom: 11px; }
+  .edu-degree { font-size: 8.9pt; font-weight: 600; color: var(--navy); line-height: 1.4; }
+  .edu-school { font-size: 8.3pt; color: var(--muted); font-style: italic; margin-top: 1px; }
+  .edu-dates { font-size: 8.1pt; color: var(--muted); }
+
+  .cert-list { list-style: none; }
+  .cert-list li { font-size: 8.6pt; padding: 3px 0 3px 13px; position: relative; line-height: 1.45; }
+  .cert-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold2); font-size: 8pt; font-weight: 700; }
+  .cert-issuer { display: block; font-size: 7.8pt; color: var(--muted); }
+
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .skill-tag {
+    background: #fff;
+    border: 1px solid var(--rule);
+    color: var(--navy);
+    font-size: 7.9pt;
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+
+  .lang-row div { font-size: 8.7pt; margin-bottom: 3px; display:flex; justify-content: space-between; }
+  .lang-row .level { color: var(--muted); }
+
+  /* ===== MAIN CONTENT ===== */
+  .summary p { font-size: 9.6pt; line-height: 1.68; color: var(--text); }
+
+  .company-block { margin-top: 16px; }
+  .company-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 4px; margin-bottom: 8px;
+  }
+  .company-name { font-size: 11pt; font-weight: 700; color: var(--navy); }
+  .company-sub { font-size: 8.6pt; color: var(--muted); font-style: italic; }
+
+  .role-block { margin-bottom: 12px; position: relative; padding-left: 16px; border-left: 2px solid var(--gold); }
+  .role-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+  .role-title { font-size: 9.8pt; font-weight: 700; color: var(--navy2); }
+  .role-dates { font-size: 8.4pt; color: var(--muted); white-space: nowrap; font-weight: 500; }
+
+  ul.bullets { list-style: none; }
+  ul.bullets li {
+    font-size: 9.2pt; line-height: 1.58;
+    padding: 2px 0 2px 13px;
+    position: relative;
+    color: var(--text);
+  }
+  ul.bullets li::before {
+    content: '▸';
+    position: absolute; left: 0; top: 2px;
+    color: var(--gold2); font-size: 8pt;
+  }
+  .metric { font-weight: 700; color: var(--navy); }
+
+  .early-career {
+    margin-top: 16px;
+    background: var(--sidebar-bg);
+    border-left: 3px solid var(--gold);
+    padding: 12px 16px;
+  }
+  .early-career .role-line { font-size: 9pt; font-weight: 600; color: var(--navy); }
+  .early-career .role-dates { font-size: 8.3pt; color: var(--muted); }
+  .early-career p { font-size: 8.9pt; margin-top: 6px; color: var(--text); line-height: 1.5; }
+
+  @media print {
+    @page { size: A4; margin: 8mm; }
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!--
+    PHOTO: replace the .photo-wrap contents below with
+    <img src="photo.jpg" alt="Yogeswara Reddy Gondesi">
+    once the headshot file is available alongside this HTML file.
+    Currently showing a monogram placeholder.
+  -->
+  <header class="header">
+    <div class="photo-wrap">
+      <div class="monogram">YRG</div>
+    </div>
+    <div class="header-text">
+      <h1>Yogeswara Reddy Gondesi</h1>
+      <div class="title">Senior Business Development &amp; Technical Consultant</div>
+      <div class="subtitle">Multi-Vertical Technical Sales &nbsp;·&nbsp; Consultant &amp; Specifier Relations &nbsp;·&nbsp; UAE / GCC</div>
+      <div class="contact">
+        <span>Dubai, UAE</span>
+        <span>+971 56 167 8385</span>
+        <span><a href="mailto:yogeswarareddy99@gmail.com">yogeswarareddy99@gmail.com</a></span>
+        <span><a href="https://linkedin.com/in/yogeswara-reddy-gondesi-b2144364">linkedin.com/in/yogeswara-reddy-gondesi-b2144364</a></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="proof-strip">
+    <div class="proof-item"><strong>11+ yrs</strong> technical B2B sales, GCC</div>
+    <div class="proof-item"><strong>Preferred-vendor</strong> status sustained with regional consultants</div>
+    <div class="proof-item"><strong>15-person</strong> multi-vertical sales force led</div>
+    <div class="proof-item"><strong>€5M</strong> annual portfolio &middot; <strong>€1.2M</strong> largest single order</div>
+    <div class="proof-item">B.Tech <strong>Electrical &amp; Electronics Engineering</strong></div>
+  </div>
+
+  <div class="body-wrap">
+    <!-- ===================== SIDEBAR ===================== -->
+    <aside class="sidebar">
+
+      <div class="side-block">
+        <div class="side-title">Focus Areas</div>
+        <ul class="side-list">
+          <li>Consultant &amp; Specifier Relationship Management</li>
+          <li>Vendor / Brand Registration &amp; Approved Supplier Listing</li>
+          <li>Multi-Vertical Sales Team Leadership &amp; Coaching</li>
+          <li>Strategic Technical Selling &amp; GTM Planning</li>
+          <li>Specification-Driven Project Sales</li>
+          <li>Technical Presentations &amp; Product Demonstrations</li>
+          <li>KPI-Driven Sales Performance Management</li>
+          <li>Channel &amp; Distributor Enablement</li>
+          <li>Cross-Functional Stakeholder Management</li>
+          <li>Contract Negotiation &amp; Commercial Management</li>
+          <li>Standards &amp; Compliance (IEC 62305, IEEE Std. 80)</li>
+        </ul>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Technical Skills &amp; Tools</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Earthing &amp; Lightning Protection</span>
+          <span class="skill-tag">Surge Protection</span>
+          <span class="skill-tag">Power Distribution</span>
+          <span class="skill-tag">MS Dynamics CRM</span>
+          <span class="skill-tag">Sales Forecasting</span>
+          <span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">AutoCAD</span>
+          <span class="skill-tag">MS Project</span>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Education</div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Tech, Electrical &amp; Electronics Engineering (Distinction)</div>
+          <div class="edu-school">Amrita School of Engineering, Amrita Vishwa Vidyapeetham</div>
+          <div class="edu-dates">2010 – 2014</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">PG Diploma, Business Administration – Marketing (Distinction)</div>
+          <div class="edu-school">Symbiosis Centre for Distance Learning</div>
+          <div class="edu-dates">2019 – 2021</div>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Certifications</div>
+        <ul class="cert-list">
+          <li>PMP® Certification Training <span class="cert-issuer">The Knowledge Academy</span></li>
+          <li>Lean Six Sigma Green &amp; Yellow Belt <span class="cert-issuer">Black Belt in progress</span></li>
+          <li>Advanced Cert., AI &amp; Machine Learning <span class="cert-issuer">IIT Kanpur, 2022–23</span></li>
+          <li>Green Hydrogen, Green Ammonia &amp; Renewable Energy <span class="cert-issuer">IESD India</span></li>
+        </ul>
+      </div>
+
+      <div class="side-block">
+        <div class="side-title">Languages</div>
+        <div class="lang-row">
+          <div><span>English</span><span class="level">Full Professional</span></div>
+          <div><span>Hindi</span><span class="level">Fluent</span></div>
+          <div><span>Telugu</span><span class="level">Native</span></div>
+          <div><span>Arabic</span><span class="level">Elementary</span></div>
+          <div><span>Malayalam</span><span class="level">Conversational</span></div>
+          <div><span>Tamil</span><span class="level">Conversational</span></div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ===================== MAIN ===================== -->
+    <main class="main">
+
+      <div class="main-title">Profile</div>
+      <div class="summary">
+        <p>
+          Senior Business Development and Technical Sales leader with <strong>11+ years</strong> driving
+          consultant-led, specification-based sales for multi-vertical technical product portfolios across the
+          GCC. Proven track record achieving and sustaining <strong>preferred/approved-vendor status</strong> with
+          regional consulting firms, architects, and MEP planners — the exact mechanism through which a technical
+          product range gets vendor-listed, specified, and ultimately purchased on a project. Currently Manager,
+          Technical &amp; Strategic Sales for a multinational electrical infrastructure manufacturer, where I
+          guide and coach a <strong>15-person front-line sales force</strong> (4 direct reports plus distributor
+          sales teams reviewed weekly) across multiple product categories — working alongside each team on live
+          opportunities to convert pipeline into closed sales against monthly and annual KPI targets. Skilled in
+          translating complex technical specifications (earthing, lightning and surge protection to
+          <strong>IEC 62305 / IEEE Std. 80</strong>) into consultant-facing technical presentations, product
+          demonstrations, and go-to-market strategy — having planned and executed the strategic technical selling
+          programme for <strong>3 major product launches</strong>, each achieving <strong>20–30% revenue
+          growth</strong> in its first year. Engineering-trained (B.Tech, Electrical &amp; Electronics Engineering)
+          with a postgraduate business qualification (PG Diploma, Business Administration – Marketing), bringing
+          equal fluency to technical specification discussions and commercial/team leadership. Represented my
+          current employer at Light + Building (Frankfurt) and The Big 5 (Riyadh), and report directly to senior
+          international leadership including the company's Management Board in Germany.
+        </p>
+      </div>
+
+      <div class="main-title" style="margin-top:20px;">Professional Experience</div>
+
+      <div class="company-block">
+        <div class="company-header">
+          <span class="company-name">OBO Bettermann Middle East and North Africa FZCO</span>
+          <span class="company-sub">Dubai, UAE — Electrical Infrastructure Products</span>
+        </div>
+
+        <div class="role-block">
+          <div class="role-header">
+            <span class="role-title">Manager, Technical &amp; Strategic Sales</span>
+            <span class="role-dates">Apr 2023 – Present</span>
+          </div>
+          <ul class="bullets">
+            <li>Achieve and sustain <span class="metric">preferred/approved-vendor status</span> with regional consultants, architects, and EPC contractors across 8 GCC, Levant, and North Africa markets — the foundation for consistent project specification and vendor-list inclusion of the company's earthing, lightning, and surge protection product range.</li>
+            <li>Guide and coach a <span class="metric">15-person front-line sales force</span> (4 direct reports plus distributor sales teams, reviewed weekly) across multiple product verticals — working alongside teams on live opportunities to convert pipeline into closed sales against monthly and annual KPI targets.</li>
+            <li>Plan and execute strategic technical selling programmes for <span class="metric">3 major new product launches</span> — translating engineering specifications into consultant-facing technical presentations and demonstrations — delivering <span class="metric">20–30% revenue growth</span> in each new category within its first year.</li>
+            <li>Own commercial negotiation of a <span class="metric">€5M annual distributor agreement portfolio</span>, including the largest single order in the portfolio's regional history at <span class="metric">€1.2M</span>.</li>
+            <li>Present regional performance, forecasts, and strategic recommendations directly to senior international leadership, including the company's <span class="metric">Management Board in Germany</span>.</li>
+          </ul>
+        </div>
+
+        <div class="role-block">
+          <div class="role-header">
+            <span class="role-title">Assistant Manager, Technical &amp; Sales</span>
+            <span class="role-dates">Jan 2020 – Apr 2023</span>
+          </div>
+          <ul class="bullets">
+            <li>Built a new product vertical from <strong>zero market presence</strong> to an established, sustainably growing line within three years — reaching <span class="metric">~70% of annual target by Year 3</span> — including securing initial vendor listings and consultant approvals for the new product range across <span class="metric">7+ regional partners</span>.</li>
+            <li>Established sub-distribution and retail partner channels across the UAE, growing the active partner base by <span class="metric">~20%</span> and expanding into product categories not previously served.</li>
+            <li>Represented the company at <strong>Light + Building</strong> (Frankfurt, Germany) and <strong>The Big 5</strong> (Riyadh, KSA), strengthening consultant and specifier relationships across the region.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="early-career">
+        <div class="role-line">Senior Technical Sales Engineer / Technical Sales Engineer, OBO Bettermann MENA FZCO</div>
+        <div class="role-dates">Jan 2018 – Dec 2019</div>
+        <div class="role-line" style="margin-top:6px;">Senior Sales Engineer / Sales Engineer, Cupra International, Dubai</div>
+        <div class="role-dates">Nov 2014 – Dec 2017</div>
+        <p>Built the technical credibility and regional consultant/contractor network — spanning earthing, lightning protection, and surge protection systems — that became the foundation for the vendor-listing and multi-vertical sales leadership scope of subsequent management roles.</p>
+      </div>
+
+    </main>
+  </div>
+</div>
+</body>
+</html>
